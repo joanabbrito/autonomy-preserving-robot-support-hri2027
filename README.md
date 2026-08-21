@@ -1,6 +1,8 @@
 # "It Was Me Who Corrected It": Designing and Evaluating Autonomy-Preserving Robotic Support for Older Adults
 
-Code, materials, and analysis scripts accompanying the HRI 2027 submission (paper title above). Shared for transparency and reproducibility during anonymous review.
+Code, materials, and analysis scripts accompanying the HRI 2027 submission (paper title above).
+
+![Wizard control and memory support strategies, illustrated and photographed](images/figure1_setup.png)
 
 ## Contents
 
@@ -15,7 +17,7 @@ Data_Analysis/
     Thematic_Analysis_Report.md
     Preliminary_Analysis_Report.md
     h2_data_for_tost.csv     Per-participant behavioral metrics used by run_tost.py
-    raw_data_deidentified/   Survey responses (see below)
+    raw_data_deidentified/   Survey responses and de-identified Corsi Block Task scores (see below)
 ```
 
 ## What's included and what's not
