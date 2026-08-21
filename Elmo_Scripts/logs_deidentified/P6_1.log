@@ -1,0 +1,15 @@
+--- SESSION STARTED FOR: P6 ---
+[UI] Started video recording to videos/P6.avi
+[UI] Sequence Length changed to: 2
+[UI] Wait Time changed to: 8
+[UI] Clicked Intro
+[STATE] Transitioning from IDLE to INTRO
+[BEHAVIOR] say_intro triggered
+[ROBOT] Play Sound: Intro.wav
+[ROBOT] Play Sound: Instructions.wav
+[UI] Clicked Intro
+[ROBOT] Set Screen Image: normal.png
+[ROBOT] Set LEDs Icon: elmo_idm.png
+[STATE] Transitioning from INTRO to IDLE
+[ROBOT] Set Screen Image: normal.png
+[ROBOT] Set LEDs Icon: elmo_idm.png
