@@ -27,7 +27,7 @@ This repository shares the code and data needed to reproduce every statistic rep
 **Included:**
 - All robot control and Wizard-of-Oz dashboard code.
 - All analysis and statistics scripts.
-- Session interaction logs, with timestamps and internal file paths removed (only participant ID and event sequence retained).
+- Session interaction logs, with absolute timestamps replaced by relative (seconds-since-session-start) timing and internal file paths removed (participant ID, event sequence, and relative timing retained, but not real-world dates/times).
 - Survey response data (post-study questionnaires, manipulation check), and pre-study responses with demographic fields (age, sex, education, prior occupation) removed.
 - Coded interview excerpts used in the thematic analysis.
 

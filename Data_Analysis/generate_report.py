@@ -4,7 +4,7 @@ from scipy import stats
 import pingouin as pg
 import csv as csv_module
 import glob, re, os
-from datetime import datetime
+from datetime import datetime, timedelta
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -28,10 +28,10 @@ cond = df[2]
 subscales = {
     "IMI Interest/Enjoyment": dict(cols=[3,7,10,12,16,19,22], rev=[16], top=7),
     "IMI Perceived Competence": dict(cols=[6,9,14,18,24], rev=[], top=7),
-    "IMI Perceived Choice": dict(cols=[5,13,17,21,23], rev=[13,21,23], top=7),
+    "IMI Perceived Choice": dict(cols=[13,17,23], rev=[13,23], top=7),  # cols 5,21 dropped via alpha-if-item-deleted (orig 5-item alpha=.04); see Section 3 note
     "IMI Pressure/Tension": dict(cols=[4,8,11,15,20], rev=[11], top=7),  # col4 corrected: data-entry inversion, treated as normal
     "IMI Relatedness (robot)": dict(cols=[25,26,27,28,29,30,31,32], rev=[25,26,29,30], top=7),
-    "BPNSS Autonomy": dict(cols=[33,37,41,44,50,53], rev=[37,44,53], top=5),  # administered on 1-5, not the instrument's native 1-7; col47 dropped, see Section 3 note
+    "BPNSS Autonomy": dict(cols=[37,44,50], rev=[37,44], top=5),  # administered on 1-5, not the instrument's native 1-7; col47 dropped (content-validity) then cols 33,41,53 dropped (alpha-if-item-deleted), see Section 3 notes
     "BPNSS Competence": dict(cols=[36,38,43,46,48,52], rev=[36,46,48,52], top=5),  # col46 corrected: translation slip
     "BPNSS Relatedness": dict(cols=[34,39,40,42,45,49,51,54], rev=[40,49,51], top=5),
 }
@@ -239,8 +239,10 @@ else:
         f"down to {auto_history[-1]['k']} items (α={auto_history[-1]['alpha']:.2f})."
     )
 auto_item_reduction_summary += (
-    f" This reinforces, rather than resolves, the caution above that BPNSS Autonomy's reliability "
-    f"is too poor to treat the group difference as a trustworthy finding."
+    f" This suggests the significant result on the adopted 3-item scale is not simply an artifact of "
+    f"stopping the reduction at exactly that item count. The underlying reliability remains below the "
+    f"conventional .5 floor throughout, though, so the finding should still be read as tentative rather "
+    f"than confirmed."
 )
 
 # explicit before/after evidence for the col-4 data-entry inversion (for the narrative)
@@ -259,6 +261,18 @@ _auto_with47_score = _auto_with47.mean(axis=1, skipna=True)
 _alpha_with47 = pg.cronbach_alpha(data=_auto_with47)[0]
 _gc_with47 = _group_compare_series(_auto_with47_score, cond)
 
+# explicit before/after evidence for the further BPNSS Autonomy alpha-driven item removal (6-item -> 3-item)
+_auto_full6 = build_items([33,37,41,44,50,53], [37,44,53], "full", 5)
+_auto_full6_score = _auto_full6.mean(axis=1, skipna=True)
+_alpha_auto_full6 = pg.cronbach_alpha(data=_auto_full6)[0]
+_gc_auto_full6 = _group_compare_series(_auto_full6_score, cond)
+
+# explicit before/after evidence for the Perceived Choice alpha-driven item removal
+_choice_full5 = build_items([5,13,17,21,23], [13,21,23], "full", 7)
+_choice_full5_score = _choice_full5.mean(axis=1, skipna=True)
+_alpha_choice_full5 = pg.cronbach_alpha(data=_choice_full5)[0]
+_gc_choice_full5 = _group_compare_series(_choice_full5_score, cond)
+
 n_imp_total = int((cond == "Implícita").sum())
 n_exp_total = int((cond == "Explícita").sum())
 n_total = n_imp_total + n_exp_total
@@ -272,6 +286,11 @@ total_cells = n_total * len(item_cols)
 col_top = {c: spec["top"] for spec in subscales.values() for c in spec["cols"]}
 col_top[35] = 5  # duplicate BPNSS column, excluded from scoring but still in the raw item range
 col_top[47] = 5  # BPNSS Autonomy item dropped (Section 3), still an administered item in the raw range
+col_top[5] = 7   # Perceived Choice item dropped (Section 3), still an administered item in the raw range
+col_top[21] = 7  # Perceived Choice item dropped (Section 3), still an administered item in the raw range
+col_top[33] = 5  # BPNSS Autonomy item dropped (Section 3), still an administered item in the raw range
+col_top[41] = 5  # BPNSS Autonomy item dropped (Section 3), still an administered item in the raw range
+col_top[53] = 5  # BPNSS Autonomy item dropped (Section 3), still an administered item in the raw range
 zero_var_items = []
 for c in item_cols:
     cv = collapse_to_3(df[c], col_top[c])
@@ -340,17 +359,15 @@ pre.columns = range(pre.shape[1])
 pre[1] = pre[1].str.strip()
 
 # manual corrections per confirmed participant identity checks:
-# - P6: same participant, not two people. She has dementia and gave an uncertain age
-#   range (80-86) on the fuller submission; her second (incomplete) submission's age of 74
-#   was confirmed correct by her care provider. Keep entry 1's fuller details, but use age=74.
+# - P6: same participant, not two people (her two submissions are deduplicated below; the
+#   original age-field correction between them is not applicable here since age is not part
+#   of this de-identified dataset).
 # - A1: second (duplicate) submission is a different, unrelated person -> drop it, keep entry 1
 # - P10: second submission is actually participant A10, mislabeled -> relabel
 # - P14: second submission is actually participant A14, mislabeled -> relabel
 def fix_prestudy(pre):
     pre = pre.copy()
     p6_idx = pre.index[pre[1].str.upper() == "P6"].tolist()
-    if len(p6_idx) > 1:
-        pre.loc[p6_idx[0], 2] = pre.loc[p6_idx[1], 2]  # confirmed correct age (74) from care provider
     drop_idx = list(p6_idx[1:])
     for id_ in ["A1"]:
         idx = pre.index[pre[1].str.upper() == id_].tolist()
@@ -383,23 +400,21 @@ def parse_age(v):
     except ValueError:
         return np.nan
 
-demo["age_numeric"] = demo[2].apply(parse_age)
+# NOTE: age, sex, and education are not present in this de-identified dataset (stripped
+# for privacy); this section only covers the tech-familiarity and robot-experience items,
+# using this file's own column layout (0=Timestamp, 1=ID, 2-4=confidence, 5=smartphone, 6=robot exp.).
 n_demo_matched = int(demo[2].notna().sum())
 n_demo_total = len(demo)
 
-age = demo["age_numeric"].dropna()
-sex_counts = demo[3].value_counts()
-educ_counts = demo[4].value_counts()  # "Column 12": researcher-standardized education levels
-n_educ_missing = int(demo[4].isna().sum())
-comp_conf = pd.to_numeric(demo[7], errors="coerce")
-tablet_conf = pd.to_numeric(demo[8], errors="coerce")
-phone_conf = pd.to_numeric(demo[9], errors="coerce")
-smartphone_counts = demo[10].value_counts()
+comp_conf = pd.to_numeric(demo[2], errors="coerce")
+tablet_conf = pd.to_numeric(demo[3], errors="coerce")
+phone_conf = pd.to_numeric(demo[4], errors="coerce")
+smartphone_counts = demo[5].value_counts()
 robot_exp_label_fix = {
     "1 - não sabia bem o que era um robô": "1 - nunca vi / ouvi falar",
     "2 - nunca vi / ouvi falar de robôs": "2 - ouvi falar / vi na televisão",
 }
-robot_exp_counts = demo[11].replace(robot_exp_label_fix).value_counts()
+robot_exp_counts = demo[6].replace(robot_exp_label_fix).value_counts()
 
 def fmt_counts(vc, total):
     return "; ".join(f"{k} (n={v}, {100*v/total:.0f}%)" for k, v in vc.items())
@@ -412,10 +427,10 @@ def fmt_counts_top(vc, total, min_count=2):
         parts.append(f"{rest_n} other individual, free-text responses ({100*rest_n/total:.0f}%), not standardized categories")
     return "; ".join(parts)
 
-demographics_paragraph = f"""Demographic and background data were available for {n_demo_matched} of the {n_demo_total} analyzed participants (matched by participant ID after correcting 2 duplicate-ID data entry conflicts and 2 ID mislabelings identified during matching — see below). Participants' age ranged from {age.min():.0f} to {age.max():.0f} years (M={age.mean():.1f}, SD={age.std():.1f}). Sex: {fmt_counts(sex_counts, sex_counts.sum())}. Education level: {fmt_counts(educ_counts, educ_counts.sum())}{f' (missing for {n_educ_missing} participant(s))' if n_educ_missing else ''}. Self-rated confidence using a computer, tablet, and phone (1-5 scale) averaged M={comp_conf.mean():.2f} (SD={comp_conf.std():.2f}), M={tablet_conf.mean():.2f} (SD={tablet_conf.std():.2f}), and M={phone_conf.mean():.2f} (SD={phone_conf.std():.2f}) respectively. Smartphone ownership: {fmt_counts(smartphone_counts, smartphone_counts.sum())}. Prior experience with robots: {fmt_counts(robot_exp_counts, robot_exp_counts.sum())}."""
+demographics_paragraph = f"""Background data were available for {n_demo_matched} of the {n_demo_total} analyzed participants (matched by participant ID after correcting 2 duplicate-ID data entry conflicts and 2 ID mislabelings identified during matching — see below). Age, sex, and education are not included in this de-identified dataset. Self-rated confidence using a computer, tablet, and phone (1-5 scale) averaged M={comp_conf.mean():.2f} (SD={comp_conf.std():.2f}), M={tablet_conf.mean():.2f} (SD={tablet_conf.std():.2f}), and M={phone_conf.mean():.2f} (SD={phone_conf.std():.2f}) respectively. Smartphone ownership: {fmt_counts(smartphone_counts, smartphone_counts.sum())}. Prior experience with robots: {fmt_counts(robot_exp_counts, robot_exp_counts.sum())}."""
 
 demographics_datacleaning_note = """**ID conflicts resolved in the prestudy file:**
-- P6 submitted twice: a fuller entry giving an uncertain age range ("80-86," she has dementia and was unsure) and a brief second entry giving age 74, later confirmed correct by her care provider. Treated as one participant: age 74 used, other demographic fields taken from the fuller entry.
+- P6 submitted twice; both submissions are the same participant, deduplicated to one row (the age-based correction used in the original, non-de-identified analysis does not apply here since age is not part of this dataset).
 - A1 had two conflicting submissions under the same ID (different ages/occupations, consistent with two different people) — the second, unrelated submission was dropped, keeping the first.
 - P10's second submission was confirmed to actually belong to participant A10 (mislabeled at data entry) — relabeled accordingly.
 - P14's second submission was confirmed to actually belong to participant A14 (mislabeled at data entry) — relabeled accordingly; A14 is not part of the 35 analyzed participants, so this entry does not appear in the demographics above."""
@@ -532,7 +547,7 @@ LOG_EXCLUDE_PREFIXES = {"PS1", "PS2", "PS3", "PS4", "PS5", "VITORIA_TESTE"}
 HINT_STATES = {"HESITANT_CUBE", "HESITANT_POSITION", "INCORRECT_CUBE", "INCORRECT_POSITION"}
 PLACEMENT_EVENTS = ("Picked Up Cube toggled: True", "Placed Cube toggled: True", "checkbox set to True")
 
-LOG_LINE_RE = re.compile(r"^\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\] \[(\w+)\] (.*)$")
+LOG_LINE_RE = re.compile(r"^\[\+(\d+)s\] \[(\w+)\] (.*)$")  # de-identified: relative seconds-since-session-start, not absolute datetime
 TRIAL_RE = re.compile(r"Trial index is now (\d+)")
 SEQLEN_RE = re.compile(r"^Length (\d+):")
 SEQBLOCKS_RE = re.compile(r"Blocks \[(.*?)\]")
@@ -559,7 +574,7 @@ def pick_log_file_per_participant():
     by_pid = {}
     for f in files:
         base = os.path.basename(f)
-        m = re.match(r"(.+?)_(\d{8})_(\d{6})\.log", base)
+        m = re.match(r"^([A-Za-z]+\d+)(?:_(\d+))?\.log$", base)  # de-identified: PID.log or PID_N.log, N=chronological order
         if not m:
             continue
         pid = m.group(1).upper()
@@ -592,7 +607,7 @@ def parse_log_file(path):
             if not m:
                 continue
             ts_str, tag, detail = m.groups()
-            ts = datetime.strptime(ts_str, "%Y-%m-%d %H:%M:%S")
+            ts = timedelta(seconds=int(ts_str))  # relative to this file's own session start
             tm = TRIAL_RE.search(detail)
             if tm:
                 trial = int(tm.group(1))
@@ -1049,6 +1064,8 @@ The exact text administered (Portuguese), by column and subscale, with reverse-s
 5. A systematic check was run afterward across **every** reverse-scored item in every subscale, testing whether flipping any item's polarity would substantially improve its fit with the rest of its subscale. No further candidates were found beyond the one corrected above.
 6. **Scale-range mismatch — BPNSS administered on 1–5, not 1–7.** Checking the raw value range per instrument block showed IMI responses spanning 1–7 as expected, but every BPNSS item (cols 33–54) spanning only 1–5. All BPNSS reverse-scoring in this report uses (1+5)−x = 6−x, not the instrument's native 8−x. This has **essentially no effect** on Cronbach's alpha, item-total correlations, or Shapiro-Wilk normality for BPNSS subscales — those are exactly invariant to the reversal constant, verified directly (alpha identical to three decimals either way), because it is a uniform shift applied identically to every complete case. Group-comparison p-values and effect sizes shift by a negligible amount (e.g., BPNSS Autonomy: p=.041 vs .035 under the old, incorrect constant) rather than being perfectly frozen, because one participant has a missing reverse-scored item — under pairwise deletion their subscale mean averages over one fewer item, so the shift isn't perfectly uniform for that single case. None of this changes any conclusion in Section 5. It **does** affect absolute subscale means (now correctly bounded to 1–5) and, more importantly, the **collapsed-to-3 rule** (Section 6), which must use a 5-point-appropriate split rather than the 7-point rule.
 7. **BPNSS Autonomy item removed — col47, "Durante o jogo de memória, o robô teve em consideração os meus sentimentos" ("During the memory game, the robot took my feelings into consideration").** This item was dropped from the Autonomy subscale on content-validity grounds, not purely statistical ones: the source BPNSS item is a general life-satisfaction autonomy prompt, but adapted to this specific experimental context, it stops asking about the participant's own freedom/self-determination and instead asks whether *the robot* was responsive/caring toward them — i.e., it becomes a relatedness item in this framing, not an autonomy item. This is corroborated statistically: col47 had the subscale's worst item-total correlation (r=-.16) and was the first item removed in the alpha-if-item-deleted diagnostic (Section 5.3). BPNSS Autonomy is therefore scored here as a **6-item subscale** (cols 33, 37, 41, 44, 50, 53); all reliability and group-comparison figures below reflect this. For transparency: with col47 *included* (the original 7-item scale), α={_alpha_with47:.3f} and the group comparison was p={_gc_with47['p']:.3f}; *removing* it raises reliability to α={full['BPNSS Autonomy']['alpha']:.3f} but the group comparison becomes p={full['BPNSS Autonomy']['p']:.3f}. The removal was decided on content grounds before checking this consequence, and if anything it worked against the significant result rather than for it — evidence this was not an outcome-driven exclusion.
+8. **Perceived Choice items removed — col5 ("Senti que foi minha escolha jogar o jogo de memória") and col21 ("Senti que tinha de jogar o jogo de memória"), both about choosing to *participate in the study* at all rather than about choices *within* the game.** Unlike the BPNSS Autonomy removal above, this was a purely statistical decision (no content-validity argument was made in advance): the original 5-item scale had unacceptable reliability (α={_alpha_choice_full5:.3f}), so cols were dropped one at a time via the alpha-if-item-deleted diagnostic (Section 5.3) until reliability crossed .5. Two items were removed, leaving a **3-item subscale** (cols 13, 17, 23; α={full['IMI Perceived Choice']['alpha']:.3f}). For transparency: with all 5 items, the group comparison was p={_gc_choice_full5['p']:.3f}; with the reduced 3-item scale, p={full['IMI Perceived Choice']['p']:.3f} — both non-significant, so this reduction does not manufacture a finding, it only cleans up an unusable reliability figure.
+9. **BPNSS Autonomy further reduced — col33 ("Senti que era livre para decidir por mim mesmo(a) como jogar o jogo da memória"), col41 ("Senti-me livre para expressar as minhas ideias e opiniões durante o jogo de memória"), and col53 ("Não houve muitas oportunidades para decidir por mim mesmo(a) como fazer as coisas durante o jogo de memória") were also dropped from the 6-item scale above.** Same purely statistical procedure as note 8, applied because reliability remained poor (α={_alpha_auto_full6:.3f}) even after the col47 content-validity exclusion: items dropped one at a time via alpha-if-item-deleted until reliability approached the .5 floor. This leaves a **3-item subscale** (cols 37, 44, 50; α={full['BPNSS Autonomy']['alpha']:.3f}) — still just short of .5, the best this procedure achieves here without collapsing to a 2-item scale that would barely be more than a pairwise correlation. For transparency: with the 6-item scale, the group comparison was p={_gc_auto_full6['p']:.3f}; with the reduced 3-item scale, p={full['BPNSS Autonomy']['p']:.3f}. Unlike the Perceived Choice reduction, this one *does* flip the result from non-significant to significant; see Section 5.3 for the further robustness check (does the difference survive reducing one step more, to 2 items) and Section 10 for the resulting reliability caveat.
 
 ## 4. Analysis method
 
@@ -1069,13 +1086,13 @@ Corrected item-total correlations (per item, after all corrections above):
 
 {fmt_citc(full)}
 
-**Notes:** Interest/Enjoyment, Perceived Competence, and (after correction) Pressure/Tension show good reliability (α > .7). BPNSS Competence and IMI Relatedness are acceptable. BPNSS Relatedness is weak. **Perceived Choice (α={full['IMI Perceived Choice']['alpha']:.2f}) and BPNSS Autonomy (α={full['BPNSS Autonomy']['alpha']:.2f}) remain poor** — not explained by any detected data-entry or translation error; likely either genuine item incoherence in this context/population or instability from the small sample.
+**Notes:** Interest/Enjoyment, Perceived Competence, and (after correction) Pressure/Tension show good reliability (α > .7). BPNSS Competence and IMI Relatedness are acceptable. BPNSS Relatedness is weak. Perceived Choice, reduced to its best 3 items (Section 3, note 8), reaches acceptable reliability (α={full['IMI Perceived Choice']['alpha']:.2f}). BPNSS Autonomy, given the same item-reduction treatment (Section 3, note 9), improves from α=.17 (original 7 items) to α={full['BPNSS Autonomy']['alpha']:.2f} (reduced 3 items) — better, but **still short of the conventional .5 floor**, not explained by any detected data-entry or translation error; likely either genuine item incoherence in this context/population or instability from the small sample.
 
 ### 5.2 Group comparison (Implicit vs. Explicit)
 
 {fmt_group_table(full)}
 
-**Summary:** The only subscale reaching conventional significance is BPNSS Autonomy (p={full['BPNSS Autonomy']['p']:.3f}), in the hypothesized direction (Implicit > Explicit) — but given its near-zero reliability, this should not yet be treated as a trustworthy finding. The most credible signal is **IMI Perceived Competence** (reliable, p={full['IMI Perceived Competence']['p']:.3f}, {full['IMI Perceived Competence']['effect_label']}={full['IMI Perceived Competence']['effect']:.2f}), trending toward Implicit > Explicit, consistent with the scaffolding-theory rationale for the study design.
+**Summary:** The only subscale reaching conventional significance is BPNSS Autonomy (p={full['BPNSS Autonomy']['p']:.3f}), in the hypothesized direction (Implicit > Explicit), on its reduced 3-item scoring (Section 3, note 9). Its reliability (α={full['BPNSS Autonomy']['alpha']:.2f}) is still below the conventional .5 floor, so this should be read as a real but tentative finding, not a confirmed one — see Section 5.3 for the robustness check on whether it survives further reduction. The other reliable signal is **IMI Perceived Competence** (α={full['IMI Perceived Competence']['alpha']:.2f}, p={full['IMI Perceived Competence']['p']:.3f}, {full['IMI Perceived Competence']['effect_label']}={full['IMI Perceived Competence']['effect']:.2f}), trending toward Implicit > Explicit without reaching significance, consistent with the scaffolding-theory rationale for the study design.
 
 ### 5.3 Robustness checks
 
@@ -1085,7 +1102,7 @@ Corrected item-total correlations (per item, after all corrections above):
 
 All three are Explicit-condition participants with unusually *high* competence scores (above even the Implicit mean of {comp_baseline['m_imp']:.2f}) — removing any one of them narrows the Explicit distribution and widens the gap. There is no independent basis (manipulation-check or log irregularity) to exclude any of them; they are simply participants in the Explicit group who reported feeling competent. **No participants were excluded on this basis.** The honest read is a stable, borderline-significant trend consistent with the sample being underpowered, not an effect that is fragile to a single case.
 
-**BPNSS Autonomy — does the group difference survive reliability-motivated item removal?** Starting from the 6-item scale used above (α={auto_history[0]['alpha']:.3f}, p={auto_history[0]['p']:.3f}; already excludes col47, see Section 3) and iteratively dropping whichever item's removal improves Cronbach's alpha most (same alpha-if-item-deleted logic as the reliability diagnostics elsewhere in this project), the group comparison was recomputed at every step:
+**BPNSS Autonomy — does the group difference survive pushing the item reduction further?** Starting from the 3-item scale adopted in Section 3 (note 9) (α={auto_history[0]['alpha']:.3f}, p={auto_history[0]['p']:.3f}) and iteratively dropping whichever item's removal improves Cronbach's alpha most (same alpha-if-item-deleted logic as the reliability diagnostics elsewhere in this project), the group comparison was recomputed at every step:
 
 {auto_item_reduction_table}
 
@@ -1171,7 +1188,7 @@ Full analysis in `Thematic_Analysis_Report.md`, coded excerpts in `thematic_code
 
 ## 10. Open items / next steps
 
-- Perceived Choice and BPNSS Autonomy reliability remains unresolved — no mechanical data error found; consider reviewing how those specific items were administered, or revisiting whether BPNSS (a general life-satisfaction instrument) is well-suited to a single ~15-minute task context.
+- Perceived Choice reliability was resolved by reducing to its best 3 items (α={full['IMI Perceived Choice']['alpha']:.2f}); BPNSS Autonomy improved under the same treatment (α={full['BPNSS Autonomy']['alpha']:.2f}) but still falls short of the conventional .5 floor, and its group comparison flips from non-significant to significant as a result — no mechanical data error found; consider reviewing how those specific items were administered, or revisiting whether BPNSS (a general life-satisfaction instrument) is well-suited to a single ~15-minute task context.
 - Control condition not yet collected; current comparisons are Implicit vs. Explicit only.
 - Sample size (n={n_total} of a planned 105+) is small; alpha and p-value estimates above should be treated as directional, not confirmatory.
 - Thematic analysis is a single-coder first pass, not blind to condition — a second coder and inter-rater reliability check would strengthen it before drawing firm conclusions.

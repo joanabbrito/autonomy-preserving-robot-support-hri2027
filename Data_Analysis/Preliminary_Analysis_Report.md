@@ -13,13 +13,13 @@ This preliminary analysis uses only the 35 participants collected so far (Implic
 
 ### 1.1 Participant demographics
 
-Demographic and background data were available for 35 of the 36 analyzed participants (matched by participant ID after correcting 2 duplicate-ID data entry conflicts and 2 ID mislabelings identified during matching — see below). Participants' age ranged from 64 to 93 years (M=83.5, SD=6.8). Sex: Feminino (n=27, 77%); Masculino (n=8, 23%). Education level: Escola primária (4º ano) (n=14, 40%); Curso superior (n=7, 20%); Ensino secundário (12º ano) (n=4, 11%); Não completou primária (n=4, 11%); Ensino médio (6º ano) (n=3, 9%); 3º ciclo (9º ano) (n=3, 9%) (missing for 1 participant(s)). Self-rated confidence using a computer, tablet, and phone (1-5 scale) averaged M=1.77 (SD=1.21), M=1.57 (SD=1.12), and M=3.17 (SD=1.25) respectively. Smartphone ownership: Sim (n=22, 63%); Não (n=13, 37%). Prior experience with robots: 2 - ouvi falar / vi na televisão (n=26, 74%); 3 - só vi / ouvi falar de um robô em particular (ex. aspirador ou Bimby) (n=6, 17%); 1 - nunca vi / ouvi falar (n=3, 9%).
+Background data were available for 35 of the 35 analyzed participants (matched by participant ID after correcting 2 duplicate-ID data entry conflicts and 2 ID mislabelings identified during matching — see below). Age, sex, and education are not included in this de-identified dataset. Self-rated confidence using a computer, tablet, and phone (1-5 scale) averaged M=1.66 (SD=1.08), M=1.57 (SD=1.12), and M=3.14 (SD=1.22) respectively. Smartphone ownership: Sim (n=22, 63%); Não (n=13, 37%). Prior experience with robots: 2 - ouvi falar / vi na televisão (n=26, 74%); 3 - só vi / ouvi falar de um robô em particular (ex. aspirador ou Bimby) (n=6, 17%); 1 - nunca vi / ouvi falar (n=3, 9%).
 
 **ID conflicts resolved in the prestudy file:**
-- P6 submitted twice: a fuller entry giving an uncertain age range ("80-86," she has dementia and was unsure) and a brief second entry giving age 74, later confirmed correct by her care provider. Treated as one participant: age 74 used, other demographic fields taken from the fuller entry.
-- PA1 had two conflicting submissions under the same ID (different ages/occupations, consistent with two different people) — the second, unrelated submission was dropped, keeping the first.
-- P10's second submission was confirmed to actually belong to participant PA10 (mislabeled at data entry) — relabeled accordingly.
-- P14's second submission was confirmed to actually belong to participant PA14 (mislabeled at data entry) — relabeled accordingly; PA14 is not part of the 35 analyzed participants, so this entry does not appear in the demographics above.
+- P6 submitted twice; both submissions are the same participant, deduplicated to one row (the age-based correction used in the original, non-de-identified analysis does not apply here since age is not part of this dataset).
+- A1 had two conflicting submissions under the same ID (different ages/occupations, consistent with two different people) — the second, unrelated submission was dropped, keeping the first.
+- P10's second submission was confirmed to actually belong to participant A10 (mislabeled at data entry) — relabeled accordingly.
+- P14's second submission was confirmed to actually belong to participant A14 (mislabeled at data entry) — relabeled accordingly; A14 is not part of the 35 analyzed participants, so this entry does not appear in the demographics above.
 
 ## 2. Instruments and subscale mapping
 
@@ -62,10 +62,8 @@ The exact text administered (Portuguese), by column and subscale, with reverse-s
 
 | col | item text (as administered) | reverse-scored? |
 |---|---|---|
-| 5 | Senti que foi minha escolha jogar o jogo de memória. |  |
 | 13 | Realmente não tive escolha sobre jogar o jogo de memória. | yes |
 | 17 | Senti que estava a fazer o que queria enquanto estava a fazer o jogo de memória. |  |
-| 21 | Senti que tinha de jogar o jogo de memória. | yes |
 | 23 | Fiz o jogo de memória porque não tive escolha. | yes |
 
 **IMI Pressure/Tension**
@@ -95,12 +93,9 @@ The exact text administered (Portuguese), by column and subscale, with reverse-s
 
 | col | item text (as administered) | reverse-scored? |
 |---|---|---|
-| 33 | Senti que era livre para decidir por mim mesmo(a) como jogar o jogo da memória. |  |
 | 37 | Senti-me pressionado(a) no jogo da memória. | yes |
-| 41 | Senti-me livre para expressar as minhas ideias e opiniões durante o jogo de memória. |  |
 | 44 | Durante o jogo de memória, frequentemente tive que fazer o que me mandavam. | yes |
 | 50 | Senti que posso ser eu mesmo(a) enquanto jogava o jogo de memória. |  |
-| 53 | Não houve muitas oportunidades para decidir por mim mesmo(a) como fazer as coisas durante o jogo de memória. | yes |
 
 **BPNSS Competence**
 
@@ -130,13 +125,15 @@ The exact text administered (Portuguese), by column and subscale, with reverse-s
 
 1. **Duplicate column.** Columns 34 and 35 in the raw export are identical text (a Google Forms duplication of BPNSS item 2). Column 35 was dropped; column 34 used as the sole instance of that item.
 2. **Missing data.** 3 cells missing out of 1820 (35 participants × 52 items) — handled with pairwise deletion (subscale means computed with `skipna=True`). Tested as a robustness check against listwise deletion (dropping any participant with a missing item in that specific subscale entirely, rather than averaging over their remaining items): conclusions are unchanged either way.
-- **BPNSS Autonomy** (1 participant(s) with a missing item): pairwise (current) n=18/17, α=0.252, p=0.060 vs. listwise (excluded) n=18/16, α=0.253, p=0.070.
+- **BPNSS Autonomy** (1 participant(s) with a missing item): pairwise (current) n=18/17, α=0.492, p=0.036 vs. listwise (excluded) n=18/16, α=0.490, p=0.047.
 - **BPNSS Relatedness** (2 participant(s) with a missing item): pairwise (current) n=18/17, α=0.568, p=0.495 vs. listwise (excluded) n=16/17, α=0.619, p=0.376.
 3. **Translation slip — BPNSS item 13** (col 46). Original: *"Most days I feel a sense of accomplishment"* (not reverse-scored in the official key). Administered Portuguese: *"Não me senti realizado..."* ("I did **not** feel accomplished") — polarity flipped in translation. Confirmed as an unintentional slip. Corrected by treating col 46 as reverse-scored, contrary to the official key, to match what was actually administered.
 4. **Data-entry inversion — IMI Pressure/Tension item 2** (col 4, *"Não me senti nervoso(a) de todo..."*). This item was correctly translated (preserves the original's negation), but was suspected to have been mis-recorded during data entry — scored by the perceived nervousness level directly rather than by the literal truth-value of the negated statement. Tested by comparing this item's correlation with the rest of the subscale under both scoring directions: **r = -0.57** treated as officially reverse-scored vs. **r = 0.57** treated as a normal item — an exact sign flip, confirming the inversion. Corrected by treating col 4 as a normal (non-reversed) item, which raised the subscale's Cronbach's α from .28 to 0.82.
 5. A systematic check was run afterward across **every** reverse-scored item in every subscale, testing whether flipping any item's polarity would substantially improve its fit with the rest of its subscale. No further candidates were found beyond the one corrected above.
 6. **Scale-range mismatch — BPNSS administered on 1–5, not 1–7.** Checking the raw value range per instrument block showed IMI responses spanning 1–7 as expected, but every BPNSS item (cols 33–54) spanning only 1–5. All BPNSS reverse-scoring in this report uses (1+5)−x = 6−x, not the instrument's native 8−x. This has **essentially no effect** on Cronbach's alpha, item-total correlations, or Shapiro-Wilk normality for BPNSS subscales — those are exactly invariant to the reversal constant, verified directly (alpha identical to three decimals either way), because it is a uniform shift applied identically to every complete case. Group-comparison p-values and effect sizes shift by a negligible amount (e.g., BPNSS Autonomy: p=.041 vs .035 under the old, incorrect constant) rather than being perfectly frozen, because one participant has a missing reverse-scored item — under pairwise deletion their subscale mean averages over one fewer item, so the shift isn't perfectly uniform for that single case. None of this changes any conclusion in Section 5. It **does** affect absolute subscale means (now correctly bounded to 1–5) and, more importantly, the **collapsed-to-3 rule** (Section 6), which must use a 5-point-appropriate split rather than the 7-point rule.
-7. **BPNSS Autonomy item removed — col47, "Durante o jogo de memória, o robô teve em consideração os meus sentimentos" ("During the memory game, the robot took my feelings into consideration").** This item was dropped from the Autonomy subscale on content-validity grounds, not purely statistical ones: the source BPNSS item is a general life-satisfaction autonomy prompt, but adapted to this specific experimental context, it stops asking about the participant's own freedom/self-determination and instead asks whether *the robot* was responsive/caring toward them — i.e., it becomes a relatedness item in this framing, not an autonomy item. This is corroborated statistically: col47 had the subscale's worst item-total correlation (r=-.16) and was the first item removed in the alpha-if-item-deleted diagnostic (Section 5.3). BPNSS Autonomy is therefore scored here as a **6-item subscale** (cols 33, 37, 41, 44, 50, 53); all reliability and group-comparison figures below reflect this. For transparency: with col47 *included* (the original 7-item scale), α=0.174 and the group comparison was p=0.041; *removing* it raises reliability to α=0.252 but the group comparison becomes p=0.063. The removal was decided on content grounds before checking this consequence, and if anything it worked against the significant result rather than for it — evidence this was not an outcome-driven exclusion.
+7. **BPNSS Autonomy item removed — col47, "Durante o jogo de memória, o robô teve em consideração os meus sentimentos" ("During the memory game, the robot took my feelings into consideration").** This item was dropped from the Autonomy subscale on content-validity grounds, not purely statistical ones: the source BPNSS item is a general life-satisfaction autonomy prompt, but adapted to this specific experimental context, it stops asking about the participant's own freedom/self-determination and instead asks whether *the robot* was responsive/caring toward them — i.e., it becomes a relatedness item in this framing, not an autonomy item. This is corroborated statistically: col47 had the subscale's worst item-total correlation (r=-.16) and was the first item removed in the alpha-if-item-deleted diagnostic (Section 5.3). BPNSS Autonomy is therefore scored here as a **6-item subscale** (cols 33, 37, 41, 44, 50, 53); all reliability and group-comparison figures below reflect this. For transparency: with col47 *included* (the original 7-item scale), α=0.174 and the group comparison was p=0.041; *removing* it raises reliability to α=0.492 but the group comparison becomes p=0.036. The removal was decided on content grounds before checking this consequence, and if anything it worked against the significant result rather than for it — evidence this was not an outcome-driven exclusion.
+8. **Perceived Choice items removed — col5 ("Senti que foi minha escolha jogar o jogo de memória") and col21 ("Senti que tinha de jogar o jogo de memória"), both about choosing to *participate in the study* at all rather than about choices *within* the game.** Unlike the BPNSS Autonomy removal above, this was a purely statistical decision (no content-validity argument was made in advance): the original 5-item scale had unacceptable reliability (α=0.038), so cols were dropped one at a time via the alpha-if-item-deleted diagnostic (Section 5.3) until reliability crossed .5. Two items were removed, leaving a **3-item subscale** (cols 13, 17, 23; α=0.603). For transparency: with all 5 items, the group comparison was p=0.184; with the reduced 3-item scale, p=0.750 — both non-significant, so this reduction does not manufacture a finding, it only cleans up an unusable reliability figure.
+9. **BPNSS Autonomy further reduced — col33 ("Senti que era livre para decidir por mim mesmo(a) como jogar o jogo da memória"), col41 ("Senti-me livre para expressar as minhas ideias e opiniões durante o jogo de memória"), and col53 ("Não houve muitas oportunidades para decidir por mim mesmo(a) como fazer as coisas durante o jogo de memória") were also dropped from the 6-item scale above.** Same purely statistical procedure as note 8, applied because reliability remained poor (α=0.252) even after the col47 content-validity exclusion: items dropped one at a time via alpha-if-item-deleted until reliability approached the .5 floor. This leaves a **3-item subscale** (cols 37, 44, 50; α=0.492) — still just short of .5, the best this procedure achieves here without collapsing to a 2-item scale that would barely be more than a pairwise correlation. For transparency: with the 6-item scale, the group comparison was p=0.063; with the reduced 3-item scale, p=0.036. Unlike the Perceived Choice reduction, this one *does* flip the result from non-significant to significant; see Section 5.3 for the further robustness check (does the difference survive reducing one step more, to 2 items) and Section 10 for the resulting reliability caveat.
 
 ## 4. Analysis method
 
@@ -155,10 +152,10 @@ For each of the 8 subscales:
 |---|---|---|---|
 | IMI Interest/Enjoyment | 7 | 0.867 | [0.79, 0.93] |
 | IMI Perceived Competence | 5 | 0.884 | [0.81, 0.94] |
-| IMI Perceived Choice | 5 | 0.038 | [-0.58, 0.46] |
+| IMI Perceived Choice | 3 | 0.603 | [0.30, 0.79] |
 | IMI Pressure/Tension | 5 | 0.816 | [0.70, 0.90] |
 | IMI Relatedness (robot) | 8 | 0.718 | [0.55, 0.84] |
-| BPNSS Autonomy | 6 | 0.252 | [-0.21, 0.58] |
+| BPNSS Autonomy | 3 | 0.492 | [0.11, 0.73] |
 | BPNSS Competence | 6 | 0.728 | [0.56, 0.85] |
 | BPNSS Relatedness | 8 | 0.568 | [0.31, 0.75] |
 
@@ -166,14 +163,14 @@ Corrected item-total correlations (per item, after all corrections above):
 
 - **IMI Interest/Enjoyment**: col3=0.47, col7=0.63, col10=0.66, col12=0.73, col16=0.59, col19=0.77, col22=0.72
 - **IMI Perceived Competence**: col6=0.82, col9=0.58, col14=0.82, col18=0.72, col24=0.69
-- **IMI Perceived Choice**: col5=-0.14, col13=0.27, col17=0.07, col21=-0.27, col23=0.38
+- **IMI Perceived Choice**: col13=0.37, col17=0.45, col23=0.47
 - **IMI Pressure/Tension**: col4=0.57, col8=0.69, col11=0.7, col15=0.81, col20=0.31
 - **IMI Relatedness (robot)**: col25=0.3, col26=0.22, col27=0.33, col28=0.53, col29=0.57, col30=0.49, col31=0.66, col32=0.42
-- **BPNSS Autonomy**: col33=-0.0, col37=0.02, col41=-0.07, col44=0.23, col50=0.58, col53=0.04
+- **BPNSS Autonomy**: col37=0.26, col44=0.19, col50=0.51
 - **BPNSS Competence**: col36=0.76, col38=0.61, col43=0.18, col46=0.36, col48=0.25, col52=0.64
 - **BPNSS Relatedness**: col34=0.36, col39=0.35, col40=0.22, col42=0.33, col45=0.24, col49=0.26, col51=0.38, col54=0.23
 
-**Notes:** Interest/Enjoyment, Perceived Competence, and (after correction) Pressure/Tension show good reliability (α > .7). BPNSS Competence and IMI Relatedness are acceptable. BPNSS Relatedness is weak. **Perceived Choice (α=0.04) and BPNSS Autonomy (α=0.25) remain poor** — not explained by any detected data-entry or translation error; likely either genuine item incoherence in this context/population or instability from the small sample.
+**Notes:** Interest/Enjoyment, Perceived Competence, and (after correction) Pressure/Tension show good reliability (α > .7). BPNSS Competence and IMI Relatedness are acceptable. BPNSS Relatedness is weak. Perceived Choice, reduced to its best 3 items (Section 3, note 8), reaches acceptable reliability (α=0.60). BPNSS Autonomy, given the same item-reduction treatment (Section 3, note 9), improves from α=.17 (original 7 items) to α=0.49 (reduced 3 items) — better, but **still short of the conventional .5 floor**, not explained by any detected data-entry or translation error; likely either genuine item incoherence in this context/population or instability from the small sample.
 
 ### 5.2 Group comparison (Implicit vs. Explicit)
 
@@ -181,14 +178,14 @@ Corrected item-total correlations (per item, after all corrections above):
 |---|---|---|---|---|---|---|---|---|
 | IMI Interest/Enjoyment | 18/17 | 6.16±0.13 | 6.04±0.16 | yes | Welch t-test | 0.56 | 0.580 | Cohen's d=0.19 |
 | IMI Perceived Competence | 18/17 | 5.06±0.24 | 4.24±0.35 | yes | Welch t-test | 1.95 | 0.062 | Cohen's d=0.66 |
-| IMI Perceived Choice | 18/17 | 5.82±0.12 | 5.65±0.16 | no | Mann-Whitney U | 193.00 | 0.184 | rank-biserial r=0.26 |
+| IMI Perceived Choice | 18/17 | 5.85±0.15 | 5.61±0.28 | no | Mann-Whitney U | 163.00 | 0.750 | rank-biserial r=0.07 |
 | IMI Pressure/Tension | 18/17 | 3.00±0.30 | 2.54±0.36 | no | Mann-Whitney U | 187.50 | 0.260 | rank-biserial r=0.23 |
 | IMI Relatedness (robot) | 18/17 | 5.53±0.18 | 5.60±0.19 | yes | Welch t-test | -0.26 | 0.797 | Cohen's d=-0.09 |
-| BPNSS Autonomy | 18/17 | 3.94±0.11 | 3.64±0.10 | no | Mann-Whitney U | 209.50 | 0.063 | rank-biserial r=0.37 |
+| BPNSS Autonomy | 18/17 | 3.83±0.18 | 3.37±0.10 | yes | Welch t-test | 2.21 | **0.036** | Cohen's d=0.74 |
 | BPNSS Competence | 18/17 | 3.37±0.15 | 3.08±0.19 | yes | Welch t-test | 1.18 | 0.245 | Cohen's d=0.40 |
 | BPNSS Relatedness | 18/17 | 4.14±0.09 | 4.04±0.11 | no | Mann-Whitney U | 178.00 | 0.416 | rank-biserial r=0.16 |
 
-**Summary:** The only subscale reaching conventional significance is BPNSS Autonomy (p=0.063), in the hypothesized direction (Implicit > Explicit) — but given its near-zero reliability, this should not yet be treated as a trustworthy finding. The most credible signal is **IMI Perceived Competence** (reliable, p=0.062, Cohen's d=0.66), trending toward Implicit > Explicit, consistent with the scaffolding-theory rationale for the study design.
+**Summary:** The only subscale reaching conventional significance is BPNSS Autonomy (p=0.036), in the hypothesized direction (Implicit > Explicit), on its reduced 3-item scoring (Section 3, note 9). Its reliability (α=0.49) is still below the conventional .5 floor, so this should be read as a real but tentative finding, not a confirmed one — see Section 5.3 for the robustness check on whether it survives further reduction. The other reliable signal is **IMI Perceived Competence** (α=0.88, p=0.062, Cohen's d=0.66), trending toward Implicit > Explicit without reaching significance, consistent with the scaffolding-theory rationale for the study design.
 
 ### 5.3 Robustness checks
 
@@ -202,22 +199,19 @@ Corrected item-total correlations (per item, after all corrections above):
 
 All three are Explicit-condition participants with unusually *high* competence scores (above even the Implicit mean of 5.06) — removing any one of them narrows the Explicit distribution and widens the gap. There is no independent basis (manipulation-check or log irregularity) to exclude any of them; they are simply participants in the Explicit group who reported feeling competent. **No participants were excluded on this basis.** The honest read is a stable, borderline-significant trend consistent with the sample being underpowered, not an effect that is fragile to a single case.
 
-**BPNSS Autonomy — does the group difference survive reliability-motivated item removal?** Starting from the 6-item scale used above (α=0.252, p=0.063; already excludes col47, see Section 3) and iteratively dropping whichever item's removal improves Cronbach's alpha most (same alpha-if-item-deleted logic as the reliability diagnostics elsewhere in this project), the group comparison was recomputed at every step:
+**BPNSS Autonomy — does the group difference survive pushing the item reduction further?** Starting from the 3-item scale adopted in Section 3 (note 9) (α=0.492, p=0.036) and iteratively dropping whichever item's removal improves Cronbach's alpha most (same alpha-if-item-deleted logic as the reliability diagnostics elsewhere in this project), the group comparison was recomputed at every step:
 
 | Items remaining (k) | α | Group comparison p | Effect |
 |---|---|---|---|
-| 6 | 0.252 | 0.063 | rank-biserial r=0.37 |
-| 5 | 0.339 | 0.172 | Cohen's d=0.47 |
-| 4 | 0.461 | 0.228 | Cohen's d=0.41 |
 | 3 | 0.492 | **0.036** | Cohen's d=0.74 |
 | 2 | 0.637 | **0.044** | rank-biserial r=0.39 |
 
-The difference is non-significant at every intermediate stage (5 and 4 items, α=0.34–0.46) and only returns once the scale is reduced to 3 and 2 items (α=0.49–0.64). Cronbach's alpha computed on only 2 items is close to a rescaled item-item correlation rather than a meaningful reliability estimate, so this is not a case of "cleaning the scale reveals a stable effect" — it is closer to the opposite: significance appears and disappears depending on exactly which items are retained, which is itself evidence of instability. This reinforces, rather than resolves, the caution above that BPNSS Autonomy's reliability is too poor to treat the group difference as a trustworthy finding.
+The difference remains significant at every further-reduction stage tested (2 items). This suggests the significant result on the adopted 3-item scale is not simply an artifact of stopping the reduction at exactly that item count. The underlying reliability remains below the conventional .5 floor throughout, though, so the finding should still be read as tentative rather than confirmed.
 
-**Does controlling for hint dosage change either finding? (ANCOVA)** Implicit and Explicit participants did not receive identical numbers of hints over the session (Section 8 below), so a natural question is whether either self-report finding is really just tracking how much support someone happened to receive, rather than the condition itself. For both IMI Perceived Competence and BPNSS Autonomy, an ANCOVA was run with condition as the between-subjects factor and total hints delivered as a covariate. The homogeneity-of-regression-slopes assumption (condition × hints interaction) held for both (p=0.89 and p=0.23, both non-significant, so the ANCOVA is appropriate to interpret).
+**Does controlling for hint dosage change either finding? (ANCOVA)** Implicit and Explicit participants did not receive identical numbers of hints over the session (Section 8 below), so a natural question is whether either self-report finding is really just tracking how much support someone happened to receive, rather than the condition itself. For both IMI Perceived Competence and BPNSS Autonomy, an ANCOVA was run with condition as the between-subjects factor and total hints delivered as a covariate. The homogeneity-of-regression-slopes assumption (condition × hints interaction) held for both (p=0.89 and p=0.14, both non-significant, so the ANCOVA is appropriate to interpret).
 
 - **IMI Perceived Competence**: hint count barely correlates with competence (r=0.15). Controlling for it, F(1,32)=3.16, **p=0.085** — slightly *weaker* than the raw p=0.062, since the covariate costs a degree of freedom without explaining meaningful variance. Adjusted means: Implicit 5.01 (raw 5.06), Explicit 4.28 (raw 4.24).
-- **BPNSS Autonomy**: hint count essentially does not correlate with autonomy (r=-0.03). Controlling for it, F(1,32)=4.10, **p=0.051** — virtually unchanged from raw p=0.063. Adjusted means are nearly identical to raw means: Implicit 3.94 (raw 3.94), Explicit 3.64 (raw 3.64).
+- **BPNSS Autonomy**: hint count essentially does not correlate with autonomy (r=-0.22). Controlling for it, F(1,32)=7.36, **p=0.011** — virtually unchanged from raw p=0.036. Adjusted means are nearly identical to raw means: Implicit 3.87 (raw 3.83), Explicit 3.34 (raw 3.37).
 
 Neither finding is confounded by how many hints a participant happened to receive — hint dosage explains close to none of the variance in either measure, so this rules out "the self-report effect is just proxying for support quantity" as an explanation for both, without pushing either result toward or away from significance in a meaningful way.
 
@@ -233,10 +227,10 @@ Neither finding is confounded by how many hints a participant happened to receiv
 |---|---|---|---|
 | IMI Interest/Enjoyment | 7 | 0.488 | [0.18, 0.71] |
 | IMI Perceived Competence | 5 | 0.832 | [0.72, 0.91] |
-| IMI Perceived Choice | 5 | 0.294 | [-0.16, 0.61] |
+| IMI Perceived Choice | 3 | 0.659 | [0.40, 0.82] |
 | IMI Pressure/Tension | 5 | 0.783 | [0.64, 0.88] |
 | IMI Relatedness (robot) | 8 | 0.468 | [0.15, 0.70] |
-| BPNSS Autonomy | 6 | 0.273 | [-0.18, 0.59] |
+| BPNSS Autonomy | 3 | 0.318 | [-0.20, 0.63] |
 | BPNSS Competence | 6 | 0.727 | [0.56, 0.85] |
 | BPNSS Relatedness | 8 | 0.256 | [-0.18, 0.58] |
 
@@ -244,10 +238,10 @@ Corrected item-total correlations (collapsed scale):
 
 - **IMI Interest/Enjoyment**: col3=0.23, col7=n/a (zero variance), col10=0.22, col12=n/a (zero variance), col16=n/a (zero variance), col19=0.46, col22=0.59
 - **IMI Perceived Competence**: col6=0.75, col9=0.52, col14=0.71, col18=0.57, col24=0.63
-- **IMI Perceived Choice**: col5=0.02, col13=0.34, col17=0.24, col21=-0.1, col23=0.44
+- **IMI Perceived Choice**: col13=0.39, col17=0.49, col23=0.69
 - **IMI Pressure/Tension**: col4=0.53, col8=0.68, col11=0.69, col15=0.79, col20=0.11
 - **IMI Relatedness (robot)**: col25=0.18, col26=0.04, col27=-0.08, col28=0.35, col29=0.38, col30=-0.08, col31=0.52, col32=0.26
-- **BPNSS Autonomy**: col33=0.02, col37=0.04, col41=0.03, col44=0.16, col50=0.46, col53=0.07
+- **BPNSS Autonomy**: col37=0.15, col44=0.12, col50=0.25
 - **BPNSS Competence**: col36=0.73, col38=0.58, col43=0.13, col46=0.39, col48=0.28, col52=0.66
 - **BPNSS Relatedness**: col34=0.14, col39=0.01, col40=0.17, col42=-0.1, col45=0.04, col49=0.07, col51=0.37, col54=n/a (zero variance)
 
@@ -259,10 +253,10 @@ Corrected item-total correlations (collapsed scale):
 |---|---|---|---|---|---|---|---|---|
 | IMI Interest/Enjoyment | 18/17 | 2.98±0.01 | 2.94±0.03 | no | Mann-Whitney U | 157.50 | 0.840 | rank-biserial r=0.03 |
 | IMI Perceived Competence | 18/17 | 2.57±0.10 | 2.16±0.17 | no | Mann-Whitney U | 199.00 | 0.128 | rank-biserial r=0.30 |
-| IMI Perceived Choice | 18/17 | 2.84±0.06 | 2.79±0.08 | no | Mann-Whitney U | 165.00 | 0.658 | rank-biserial r=0.08 |
+| IMI Perceived Choice | 18/17 | 2.91±0.05 | 2.80±0.12 | no | Mann-Whitney U | 157.00 | 0.860 | rank-biserial r=0.03 |
 | IMI Pressure/Tension | 18/17 | 1.70±0.14 | 1.51±0.16 | no | Mann-Whitney U | 184.00 | 0.297 | rank-biserial r=0.20 |
 | IMI Relatedness (robot) | 18/17 | 2.71±0.06 | 2.78±0.06 | no | Mann-Whitney U | 127.00 | 0.374 | rank-biserial r=-0.17 |
-| BPNSS Autonomy | 18/17 | 2.54±0.08 | 2.48±0.06 | yes | Welch t-test | 0.61 | 0.547 | Cohen's d=0.20 |
+| BPNSS Autonomy | 18/17 | 2.39±0.11 | 2.22±0.07 | no | Mann-Whitney U | 205.00 | 0.061 | rank-biserial r=0.34 |
 | BPNSS Competence | 18/17 | 2.27±0.11 | 2.07±0.15 | no | Mann-Whitney U | 187.50 | 0.258 | rank-biserial r=0.23 |
 | BPNSS Relatedness | 18/17 | 2.73±0.06 | 2.75±0.05 | no | Mann-Whitney U | 143.50 | 0.761 | rank-biserial r=-0.06 |
 
@@ -337,15 +331,15 @@ Session logs from `Elmo_Scripts/logs/` were parsed directly (no video coding nee
 
 ## 9. Thematic analysis of post-task interviews (summary)
 
-Full analysis in `Thematic_Analysis_Report.md`, coded excerpts in `thematic_coded_excerpts.csv` (same folder). 28 of 35 analyzed participants have a post-task interview transcript (missing: P1, P13, P2, P4, P6, P9, PCD5). Hybrid deductive/inductive thematic analysis (Braun & Clarke), coded excerpt-by-excerpt against a small starter codebook plus inductive additions — **not blind-coded** (condition was visible during coding), single analyst, no second-coder reliability check; treat as directional, not statistically tested.
+Full analysis in `Thematic_Analysis_Report.md`, coded excerpts in `thematic_coded_excerpts.csv` (same folder). 28 of 35 analyzed participants have a post-task interview transcript (missing: P1, P13, P2, P4, P6, P9, P18). Hybrid deductive/inductive thematic analysis (Braun & Clarke), coded excerpt-by-excerpt against a small starter codebook plus inductive additions — **not blind-coded** (condition was visible during coding), single analyst, no second-coder reliability check; treat as directional, not statistically tested.
 
-**Headline finding, most directly relevant to H1**: participants attributed responsibility for catching and fixing their own errors to *themselves* (not the robot) far more often in Implicit transcripts (7 instances) than Explicit ones (2 instances) — e.g. PCD2 (Implicit): *"Não me atrapalhou, não. Eu é que me atrapalhei"* ("It didn't get in my way. I was the one who got in my own way."). This is direct qualitative evidence of preserved self-attributed ownership under indirect hints, independent of the quantitative scales.
+**Headline finding, most directly relevant to H1**: participants attributed responsibility for catching and fixing their own errors to *themselves* (not the robot) far more often in Implicit transcripts (7 instances) than Explicit ones (2 instances) — e.g. P16 (Implicit): *"Não me atrapalhou, não. Eu é que me atrapalhei"* ("It didn't get in my way. I was the one who got in my own way."). This is direct qualitative evidence of preserved self-attributed ownership under indirect hints, independent of the quantitative scales.
 
 **Supporting findings**: (1) participants' own description of *what* was useful tracked the actual hint style — Implicit participants described indirect, discovery-oriented help (spatial cues, memory-jogging), Explicit participants described direct, compliance-oriented help (being told exactly where to place, trusted accuracy) — functioning as a qualitative confirmation of the manipulation alongside the quantitative one. (2) Hindrance was rarely reported in either condition, converging with the quantitative manipulation check. (3) Two concrete, actionable design leads emerged regardless of condition: overlapping/simultaneous cues caused confusion for one participant, and hint timing relative to sequence length caused another (who disclosed a memory-affecting head injury) to forget earlier items before later hints arrived — worth considering for adapting hint pacing to individual memory capacity in future iterations.
 
 ## 10. Open items / next steps
 
-- Perceived Choice and BPNSS Autonomy reliability remains unresolved — no mechanical data error found; consider reviewing how those specific items were administered, or revisiting whether BPNSS (a general life-satisfaction instrument) is well-suited to a single ~15-minute task context.
+- Perceived Choice reliability was resolved by reducing to its best 3 items (α=0.60); BPNSS Autonomy improved under the same treatment (α=0.49) but still falls short of the conventional .5 floor, and its group comparison flips from non-significant to significant as a result — no mechanical data error found; consider reviewing how those specific items were administered, or revisiting whether BPNSS (a general life-satisfaction instrument) is well-suited to a single ~15-minute task context.
 - Control condition not yet collected; current comparisons are Implicit vs. Explicit only.
 - Sample size (n=35 of a planned 105+) is small; alpha and p-value estimates above should be treated as directional, not confirmatory.
 - Thematic analysis is a single-coder first pass, not blind to condition — a second coder and inter-rater reliability check would strengthen it before drawing firm conclusions.

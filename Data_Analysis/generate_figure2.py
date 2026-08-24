@@ -15,9 +15,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-OUT_PATH = os.path.join(
-    os.path.dirname(HERE), "HRI'2027", "images", "self_report_subscales.pdf"
-)
+OUT_PATH = os.path.join(HERE, "self_report_subscales.pdf")
 
 # Suppress generate_report.py's own stdout/report-file side effects' noise here;
 # it still writes Preliminary_Analysis_Report*.md and h2_data_for_tost*.csv as normal.

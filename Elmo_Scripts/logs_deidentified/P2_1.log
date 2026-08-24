@@ -1,29 +1,29 @@
---- SESSION STARTED FOR: P2 ---
-[UI] Started video recording to videos/P2.avi
-[UI] Study Condition changed to: Explicit
-[UI] Sequence Length changed to: 2
-[UI] Clicked Intro
-[STATE] Transitioning from IDLE to INTRO
-[BEHAVIOR] say_intro triggered
-[ROBOT] Play Sound: Intro.wav
-[ROBOT] Play Sound: Instructions.wav
-[UI] Clicked Intro
-[UI] Clicked Abort Current
-[ROBOT] Stop All Audio invoked
-[STATE] Transitioning from INTRO to IDLE
-[ROBOT] Set Screen Image: normal.png
-[ROBOT] Set LEDs Icon: elmo_idm.png
-[UI] Clicked Abort Current
-[ROBOT] Stop All Audio invoked
-[UI] Clicked Abort Current
-[ROBOT] Stop All Audio invoked
-[UI] Clicked Abort Current
-[ROBOT] Stop All Audio invoked
-[UI] Clicked Abort Current
-[ROBOT] Stop All Audio invoked
-[UI] Clicked Abort Current
-[ROBOT] Stop All Audio invoked
-[UI] Clicked Abort Current
-[ROBOT] Stop All Audio invoked
-[UI] Clicked Abort Current
-[ROBOT] Stop All Audio invoked
+[+0s] --- SESSION STARTED FOR: P2 ---
+[+0s] [UI] Started video recording to videos/P2.avi
+[+7s] [UI] Study Condition changed to: Explicit
+[+10s] [UI] Sequence Length changed to: 2
+[+12s] [UI] Clicked Intro
+[+12s] [STATE] Transitioning from IDLE to INTRO
+[+12s] [BEHAVIOR] say_intro triggered
+[+14s] [ROBOT] Play Sound: Intro.wav
+[+19s] [ROBOT] Play Sound: Instructions.wav
+[+28s] [UI] Clicked Intro
+[+32s] [UI] Clicked Abort Current
+[+32s] [ROBOT] Stop All Audio invoked
+[+32s] [STATE] Transitioning from INTRO to IDLE
+[+32s] [ROBOT] Set Screen Image: normal.png
+[+32s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+33s] [UI] Clicked Abort Current
+[+33s] [ROBOT] Stop All Audio invoked
+[+33s] [UI] Clicked Abort Current
+[+33s] [ROBOT] Stop All Audio invoked
+[+33s] [UI] Clicked Abort Current
+[+33s] [ROBOT] Stop All Audio invoked
+[+33s] [UI] Clicked Abort Current
+[+33s] [ROBOT] Stop All Audio invoked
+[+33s] [UI] Clicked Abort Current
+[+33s] [ROBOT] Stop All Audio invoked
+[+35s] [UI] Clicked Abort Current
+[+35s] [ROBOT] Stop All Audio invoked
+[+40s] [UI] Clicked Abort Current
+[+40s] [ROBOT] Stop All Audio invoked

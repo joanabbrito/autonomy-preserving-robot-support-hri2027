@@ -1,5 +1,5 @@
---- SESSION STARTED FOR: A6 ---
-[UI] Started video recording to videos/A6.avi
-[UI] Sequence Length changed to: 2
-[UI] Clicked Intro
-[STATE] Transitioning from IDLE to INTRO
+[+0s] --- SESSION STARTED FOR: A6 ---
+[+0s] [UI] Started video recording to videos/A6.avi
+[+6s] [UI] Sequence Length changed to: 2
+[+10s] [UI] Clicked Intro
+[+10s] [STATE] Transitioning from IDLE to INTRO
