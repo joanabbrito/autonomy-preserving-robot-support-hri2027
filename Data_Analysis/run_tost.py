@@ -3,7 +3,7 @@ import pingouin as pg
 import numpy as np
 import os
 
-# Sensitivity-check exclusion: set via EXCLUDE_IDS env var, comma-separated (e.g. EXCLUDE_IDS=P15).
+# Sensitivity-check exclusion: set via EXCLUDE_IDS env var, comma-separated (e.g. EXCLUDE_IDS=P31).
 # Must match generate_report.py's EXCLUDE_IDS so this reads the matching exported CSV.
 _exclude_ids = {x.strip().upper() for x in os.environ.get("EXCLUDE_IDS", "").split(",") if x.strip()}
 _suffix = ("_excl_" + "_".join(sorted(_exclude_ids))) if _exclude_ids else ""

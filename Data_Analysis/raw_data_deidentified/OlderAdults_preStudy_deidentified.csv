@@ -1,44 +1,44 @@
 Timestamp,ID do participante,Quão confiante se sente a usar um computador?,Quão confiante se sente a usar um tablet?,Quão confiante se sente a usar um telemóvel?,Tem smartphone?,"Qual era a sua experiência com robôs, antes desta experiência?"
-02/06/2026 14:33:00,P1,1.0,1.0,3.0,Sim,3 - só vi / ouvi falar de um robô em particular (ex. aspirador ou Bimby)
-02/06/2026 14:45:25,P2,3.0,2.0,5.0,Sim,3 - só vi / ouvi falar de um robô em particular (ex. aspirador ou Bimby)
-02/06/2026 15:00:39,P3,1.0,1.0,3.0,Sim,3 - só vi / ouvi falar de um robô em particular (ex. aspirador ou Bimby)
-02/06/2026 15:11:08,P4,1.0,5.0,2.0,Sim,1 - não sabia bem o que era um robô
+02/06/2026 14:33:00,P20,1.0,1.0,3.0,Sim,3 - só vi / ouvi falar de um robô em particular (ex. aspirador ou Bimby)
+02/06/2026 14:45:25,P21,3.0,2.0,5.0,Sim,3 - só vi / ouvi falar de um robô em particular (ex. aspirador ou Bimby)
+02/06/2026 15:00:39,P22,1.0,1.0,3.0,Sim,3 - só vi / ouvi falar de um robô em particular (ex. aspirador ou Bimby)
+02/06/2026 15:11:08,P23,1.0,5.0,2.0,Sim,1 - não sabia bem o que era um robô
 02/06/2026 15:46:17,P5,2.0,3.0,4.0,Sim,4 - usei robôs ocasionalmente
-05/06/2026 10:30:31,P6,3.0,2.0,5.0,Sim,3 - só vi / ouvi falar de um robô em particular (ex. aspirador ou Bimby)
+05/06/2026 10:30:31,P24,3.0,2.0,5.0,Sim,3 - só vi / ouvi falar de um robô em particular (ex. aspirador ou Bimby)
 05/06/2026 10:52:19,P7,1.0,1.0,2.0,Não,2 - nunca vi / ouvi falar de robôs
-05/06/2026 10:52:38,P6,,,,,
-05/06/2026 11:14:14,P8,5.0,4.0,5.0,Sim,2 - nunca vi / ouvi falar de robôs
-05/06/2026 11:29:33,P9,1.0,1.0,2.0,Não,2 - nunca vi / ouvi falar de robôs
-12/06/2026 10:21:27,P10,1.0,1.0,2.0,Sim,1 - não sabia bem o que era um robô
+05/06/2026 10:52:38,P24,,,,,
+05/06/2026 11:14:14,P25,5.0,4.0,5.0,Sim,2 - nunca vi / ouvi falar de robôs
+05/06/2026 11:29:33,P26,1.0,1.0,2.0,Não,2 - nunca vi / ouvi falar de robôs
+12/06/2026 10:21:27,P27,1.0,1.0,2.0,Sim,1 - não sabia bem o que era um robô
 12/06/2026 11:12:57,P11,3.0,1.0,4.0,Sim,2 - nunca vi / ouvi falar de robôs
-12/06/2026 11:29:53,P12,3.0,1.0,2.0,Não,2 - nunca vi / ouvi falar de robôs
-12/06/2026 11:42:05,P13,1.0,2.0,3.0,Não,2 - nunca vi / ouvi falar de robôs
-30/06/2026 13:45:57,M1,4.0,1.0,5.0,Sim,2 - nunca vi / ouvi falar de robôs
-30/06/2026 13:58:50,M2,2.0,2.0,3.0,Não,2 - nunca vi / ouvi falar de robôs
-30/06/2026 14:09:54,M3,1.0,1.0,3.0,Não,2 - nunca vi / ouvi falar de robôs
-01/07/2026 11:37:37,P14,1.0,1.0,2.0,Sim,2 - nunca vi / ouvi falar de robôs
-06/07/2026 11:52:59,A1,1.0,3.0,5.0,Sim,2 - nunca vi / ouvi falar de robôs
-06/07/2026 11:55:06,A1,5.0,5.0,5.0,Sim,2 - nunca vi / ouvi falar de robôs
-06/07/2026 12:19:48,A2,1.0,1.0,1.0,Não,2 - nunca vi / ouvi falar de robôs
-06/07/2026 14:10:55,A3,1.0,1.0,2.0,Não,3 - só vi / ouvi falar de um robô em particular (ex. aspirador ou Bimby)
-06/07/2026 14:24:25,A4,1.0,3.0,2.0,Sim,2 - nunca vi / ouvi falar de robôs
-06/07/2026 14:42:27,A5,1.0,1.0,3.0,Sim,1 - não sabia bem o que era um robô
-06/07/2026 14:55:03,A6,1.0,1.0,3.0,Não,2 - nunca vi / ouvi falar de robôs
-06/07/2026 15:11:31,A7,3.0,1.0,5.0,Sim,2 - nunca vi / ouvi falar de robôs
-07/07/2026 10:37:04,A8,1.0,1.0,3.0,Não,2 - nunca vi / ouvi falar de robôs
-07/07/2026 10:53:46,A9,1.0,1.0,4.0,Sim,2 - nunca vi / ouvi falar de robôs
-07/07/2026 11:09:34,P10,1.0,5.0,4.0,Sim,2 - nunca vi / ouvi falar de robôs
-07/07/2026 11:31:52,A11,1.0,1.0,2.0,Não,3 - só vi / ouvi falar de um robô em particular (ex. aspirador ou Bimby)
-07/07/2026 11:52:54,A12,1.0,1.0,2.0,Não,2 - nunca vi / ouvi falar de robôs
-07/07/2026 14:38:22,A13,1.0,1.0,3.0,Não,2 - nunca vi / ouvi falar de robôs
-07/07/2026 14:57:22,P14,1.0,1.0,2.0,Sim,1 - não sabia bem o que era um robô
-07/07/2026 15:19:24,A15,1.0,1.0,2.0,Sim,2 - nunca vi / ouvi falar de robôs
-09/07/2026 10:51:39,P15,2.0,1.0,2.0,Não,2 - nunca vi / ouvi falar de robôs
-09/07/2026 11:07:31,P16,4.0,1.0,4.0,Sim,2 - nunca vi / ouvi falar de robôs
+12/06/2026 11:29:53,P28,3.0,1.0,2.0,Não,2 - nunca vi / ouvi falar de robôs
+12/06/2026 11:42:05,P29,1.0,2.0,3.0,Não,2 - nunca vi / ouvi falar de robôs
+30/06/2026 13:45:57,P15,4.0,1.0,5.0,Sim,2 - nunca vi / ouvi falar de robôs
+30/06/2026 13:58:50,P16,2.0,2.0,3.0,Não,2 - nunca vi / ouvi falar de robôs
+30/06/2026 14:09:54,P17,1.0,1.0,3.0,Não,2 - nunca vi / ouvi falar de robôs
+01/07/2026 11:37:37,P30,1.0,1.0,2.0,Sim,2 - nunca vi / ouvi falar de robôs
+06/07/2026 11:52:59,P1,1.0,3.0,5.0,Sim,2 - nunca vi / ouvi falar de robôs
+06/07/2026 11:55:06,P1,5.0,5.0,5.0,Sim,2 - nunca vi / ouvi falar de robôs
+06/07/2026 12:19:48,P2,1.0,1.0,1.0,Não,2 - nunca vi / ouvi falar de robôs
+06/07/2026 14:10:55,P3,1.0,1.0,2.0,Não,3 - só vi / ouvi falar de um robô em particular (ex. aspirador ou Bimby)
+06/07/2026 14:24:25,P4,1.0,3.0,2.0,Sim,2 - nunca vi / ouvi falar de robôs
+06/07/2026 14:42:27,P5,1.0,1.0,3.0,Sim,1 - não sabia bem o que era um robô
+06/07/2026 14:55:03,P6,1.0,1.0,3.0,Não,2 - nunca vi / ouvi falar de robôs
+06/07/2026 15:11:31,P7,3.0,1.0,5.0,Sim,2 - nunca vi / ouvi falar de robôs
+07/07/2026 10:37:04,P8,1.0,1.0,3.0,Não,2 - nunca vi / ouvi falar de robôs
+07/07/2026 10:53:46,P9,1.0,1.0,4.0,Sim,2 - nunca vi / ouvi falar de robôs
+07/07/2026 11:09:34,P27,1.0,5.0,4.0,Sim,2 - nunca vi / ouvi falar de robôs
+07/07/2026 11:31:52,P11,1.0,1.0,2.0,Não,3 - só vi / ouvi falar de um robô em particular (ex. aspirador ou Bimby)
+07/07/2026 11:52:54,P12,1.0,1.0,2.0,Não,2 - nunca vi / ouvi falar de robôs
+07/07/2026 14:38:22,P13,1.0,1.0,3.0,Não,2 - nunca vi / ouvi falar de robôs
+07/07/2026 14:57:22,P30,1.0,1.0,2.0,Sim,1 - não sabia bem o que era um robô
+07/07/2026 15:19:24,P14,1.0,1.0,2.0,Sim,2 - nunca vi / ouvi falar de robôs
+09/07/2026 10:51:39,P31,2.0,1.0,2.0,Não,2 - nunca vi / ouvi falar de robôs
+09/07/2026 11:07:31,P32,4.0,1.0,4.0,Sim,2 - nunca vi / ouvi falar de robôs
 09/07/2026 11:34:43,PCD3,1.0,1.0,3.0,Não,2 - nunca vi / ouvi falar de robôs
-09/07/2026 11:55:22,P17,2.0,2.0,3.0,Sim,2 - nunca vi / ouvi falar de robôs
+09/07/2026 11:55:22,P33,2.0,2.0,3.0,Sim,2 - nunca vi / ouvi falar de robôs
 14/07/2026 14:39:00,PA16,1.0,2.0,4.0,Sim,2 - nunca vi / ouvi falar de robôs
-28/07/2026 16:15:47,P18,1.0,1.0,2.0,Sim,2 - nunca vi / ouvi falar de robôs
-28/07/2026 16:26:26,P19,2.0,1.0,3.0,Sim,2 - nunca vi / ouvi falar de robôs
-31/07/2026 11:31:39,M4,1.0,1.0,5.0,Sim,2 - nunca vi / ouvi falar de robôs
-31/07/2026 12:25:36,M5,2.0,1.0,5.0,Sim,2 - nunca vi / ouvi falar de robôs
+28/07/2026 16:15:47,P34,1.0,1.0,2.0,Sim,2 - nunca vi / ouvi falar de robôs
+28/07/2026 16:26:26,P35,2.0,1.0,3.0,Sim,2 - nunca vi / ouvi falar de robôs
+31/07/2026 11:31:39,P18,1.0,1.0,5.0,Sim,2 - nunca vi / ouvi falar de robôs
+31/07/2026 12:25:36,P19,2.0,1.0,5.0,Sim,2 - nunca vi / ouvi falar de robôs

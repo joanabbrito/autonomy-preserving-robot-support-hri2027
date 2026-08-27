@@ -13,13 +13,13 @@ This preliminary analysis uses only the 35 participants collected so far (Implic
 
 ### 1.1 Participant demographics
 
-Background data were available for 35 of the 35 analyzed participants (matched by participant ID after correcting 2 duplicate-ID data entry conflicts and 2 ID mislabelings identified during matching — see below). Age, sex, and education are not included in this de-identified dataset. Self-rated confidence using a computer, tablet, and phone (1-5 scale) averaged M=1.66 (SD=1.08), M=1.57 (SD=1.12), and M=3.14 (SD=1.22) respectively. Smartphone ownership: Sim (n=22, 63%); Não (n=13, 37%). Prior experience with robots: 2 - ouvi falar / vi na televisão (n=26, 74%); 3 - só vi / ouvi falar de um robô em particular (ex. aspirador ou Bimby) (n=6, 17%); 1 - nunca vi / ouvi falar (n=3, 9%).
+Background data were available for 39 of the 39 analyzed participants (matched by participant ID after correcting 2 duplicate-ID data entry conflicts and 2 ID mislabelings identified during matching — see below). Age, sex, and education are not included in this de-identified dataset. Self-rated confidence using a computer, tablet, and phone (1-5 scale) averaged M=1.67 (SD=1.06), M=1.56 (SD=1.10), and M=3.13 (SD=1.20) respectively. Smartphone ownership: Sim (n=25, 64%); Não (n=14, 36%). Prior experience with robots: 2 - ouvi falar / vi na televisão (n=28, 72%); 3 - só vi / ouvi falar de um robô em particular (ex. aspirador ou Bimby) (n=6, 15%); 1 - nunca vi / ouvi falar (n=4, 10%); 4 - usei robôs ocasionalmente (n=1, 3%).
 
 **ID conflicts resolved in the prestudy file:**
-- P6 submitted twice; both submissions are the same participant, deduplicated to one row (the age-based correction used in the original, non-de-identified analysis does not apply here since age is not part of this dataset).
-- A1 had two conflicting submissions under the same ID (different ages/occupations, consistent with two different people) — the second, unrelated submission was dropped, keeping the first.
-- P10's second submission was confirmed to actually belong to participant A10 (mislabeled at data entry) — relabeled accordingly.
-- P14's second submission was confirmed to actually belong to participant A14 (mislabeled at data entry) — relabeled accordingly; A14 is not part of the 35 analyzed participants, so this entry does not appear in the demographics above.
+- P24 submitted twice; both submissions are the same participant, deduplicated to one row (the age-based correction used in the original, non-de-identified analysis does not apply here since age is not part of this dataset).
+- P1 had two conflicting submissions under the same ID (different ages/occupations, consistent with two different people) — the second, unrelated submission was dropped, keeping the first.
+- P27's second submission was confirmed to actually belong to participant P10 (mislabeled at data entry) — relabeled accordingly.
+- P30's second submission was confirmed to actually belong to participant P14 (mislabeled at data entry) — relabeled accordingly; that participant is not part of the 35 analyzed participants, so this entry does not appear in the demographics above.
 
 ## 2. Instruments and subscale mapping
 
@@ -193,9 +193,9 @@ Corrected item-total correlations (per item, after all corrections above):
 
 | Removed participant | Condition | Their score | Resulting p |
 |---|---|---|---|
-| M5 | Explícita | 6.40 | 0.029 |
-| P10 | Explícita | 6.20 | 0.033 |
-| P14 | Explícita | 6.00 | 0.037 |
+| P19 | Explícita | 6.40 | 0.029 |
+| P27 | Explícita | 6.20 | 0.033 |
+| P30 | Explícita | 6.00 | 0.037 |
 
 All three are Explicit-condition participants with unusually *high* competence scores (above even the Implicit mean of 5.06) — removing any one of them narrows the Explicit distribution and widens the gap. There is no independent basis (manipulation-check or log irregularity) to exclude any of them; they are simply participants in the Explicit group who reported feeling competent. **No participants were excluded on this basis.** The honest read is a stable, borderline-significant trend consistent with the sample being underpowered, not an effect that is fragile to a single case.
 
@@ -278,7 +278,7 @@ Each item is rated on a 1-5 scale and analyzed individually (not combined into a
 
 **Interpretation:** a significant, correctly-directed difference on the explicit/implicit-wording items would confirm participants experienced the two conditions as intended (a manipulation check in the traditional sense).
 
-Column 8 (*"Quando o robô me deu uma pista ainda tive de descobrir a resposta por mim próprio/a"* — "I still had to figure out the answer myself") is reported separately as a single-item Perceived Autonomy measure alongside the self-report dimensions (Section 5), not as a manipulation-check item -- it uses the full sample (n=18/17), unlike items 4-7 above, since P15's flat response is a genuine (if extreme) answer to this specific item rather than an uninterpretable one: Implicit 4.61±0.23, Explicit 1.82±0.38, Mann-Whitney U stat=272.50, p=0.00002, rank-biserial r=0.78. It also complements the multi-item Choice/Autonomy subscales in Section 5 whose reliability is poor.
+Column 8 (*"Quando o robô me deu uma pista ainda tive de descobrir a resposta por mim próprio/a"* — "I still had to figure out the answer myself") is reported separately as a single-item Perceived Autonomy measure alongside the self-report dimensions (Section 5), not as a manipulation-check item -- it uses the full sample (n=18/17), unlike items 4-7 above, since P31's flat response is a genuine (if extreme) answer to this specific item rather than an uninterpretable one: Implicit 4.61±0.23, Explicit 1.82±0.38, Mann-Whitney U stat=272.50, p=0.00002, rank-biserial r=0.78. It also complements the multi-item Choice/Autonomy subscales in Section 5 whose reliability is poor.
 
 ## 8. Task performance from game logs
 
@@ -318,7 +318,7 @@ Session logs from `Elmo_Scripts/logs/` were parsed directly (no video coding nee
 | Sub-hints delivered per hint episode (raw, non-standardized) | 18/17 | 1.60±0.08 | 1.33±0.05 | Welch t-test | 2.95 | **0.006** | Cohen's d=0.98 |
 | Hint ladder depth used (standardized, 0-1) | 18/17 | 0.44±0.02 | 0.53±0.03 | Welch t-test | -2.19 | **0.036** | Cohen's d=-0.74 |
 | Wrong-block touches | 18/17 | 1.67±0.46 | 0.59±0.19 | Mann-Whitney U | 202.50 | 0.085 | rank-biserial r=0.32 |
-| Wrong-block touches self-caught (rate, vs. needing a corrective hint) | 12/7 | 1.00±0.00 | 1.00±0.00 | Mann-Whitney U | 42.00 | 1.000 | rank-biserial r=0.00 |
+| Wrong-block touches self-caught (rate, vs. needing a corrective hint) | 12/7 | 1.00±0.00 | 1.00±0.00 | Mann-Whitney U | 42.00 | nan | rank-biserial r=0.00 |
 | Hints-per-sequence trend across session (raw count slope) | 18/17 | 0.77±0.15 | 0.58±0.16 | Mann-Whitney U | 190.50 | 0.222 | rank-biserial r=0.25 |
 | Hints-per-sequence trend, normalized by sequence length (rate slope) | 18/17 | 0.13±0.04 | 0.06±0.04 | Welch t-test | 1.03 | 0.311 | Cohen's d=0.35 |
 | Manual sequence-length resets by wizard | 18/17 | 5.06±0.37 | 5.24±0.55 | Welch t-test | -0.27 | 0.788 | Cohen's d=-0.09 |
@@ -331,9 +331,9 @@ Session logs from `Elmo_Scripts/logs/` were parsed directly (no video coding nee
 
 ## 9. Thematic analysis of post-task interviews (summary)
 
-Full analysis in `Thematic_Analysis_Report.md`, coded excerpts in `thematic_coded_excerpts.csv` (same folder). 28 of 35 analyzed participants have a post-task interview transcript (missing: P1, P13, P2, P4, P6, P9, P18). Hybrid deductive/inductive thematic analysis (Braun & Clarke), coded excerpt-by-excerpt against a small starter codebook plus inductive additions — **not blind-coded** (condition was visible during coding), single analyst, no second-coder reliability check; treat as directional, not statistically tested.
+Full analysis in `Thematic_Analysis_Report.md`, coded excerpts in `thematic_coded_excerpts.csv` (same folder). 28 of 35 analyzed participants have a post-task interview transcript (missing: P20, P29, P21, P23, P24, P26, P34). Hybrid deductive/inductive thematic analysis (Braun & Clarke), coded excerpt-by-excerpt against a small starter codebook plus inductive additions — **not blind-coded** (condition was visible during coding), single analyst, no second-coder reliability check; treat as directional, not statistically tested.
 
-**Headline finding, most directly relevant to H1**: participants attributed responsibility for catching and fixing their own errors to *themselves* (not the robot) far more often in Implicit transcripts (7 instances) than Explicit ones (2 instances) — e.g. P16 (Implicit): *"Não me atrapalhou, não. Eu é que me atrapalhei"* ("It didn't get in my way. I was the one who got in my own way."). This is direct qualitative evidence of preserved self-attributed ownership under indirect hints, independent of the quantitative scales.
+**Headline finding, most directly relevant to H1**: participants attributed responsibility for catching and fixing their own errors to *themselves* (not the robot) far more often in Implicit transcripts (7 instances) than Explicit ones (2 instances) — e.g. P32 (Implicit): *"Não me atrapalhou, não. Eu é que me atrapalhei"* ("It didn't get in my way. I was the one who got in my own way."). This is direct qualitative evidence of preserved self-attributed ownership under indirect hints, independent of the quantitative scales.
 
 **Supporting findings**: (1) participants' own description of *what* was useful tracked the actual hint style — Implicit participants described indirect, discovery-oriented help (spatial cues, memory-jogging), Explicit participants described direct, compliance-oriented help (being told exactly where to place, trusted accuracy) — functioning as a qualitative confirmation of the manipulation alongside the quantitative one. (2) Hindrance was rarely reported in either condition, converging with the quantitative manipulation check. (3) Two concrete, actionable design leads emerged regardless of condition: overlapping/simultaneous cues caused confusion for one participant, and hint timing relative to sequence length caused another (who disclosed a memory-affecting head injury) to forget earlier items before later hints arrived — worth considering for adapting hint pacing to individual memory capacity in future iterations.
 

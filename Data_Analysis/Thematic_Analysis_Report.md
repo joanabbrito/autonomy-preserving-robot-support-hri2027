@@ -1,6 +1,6 @@
 # Thematic Analysis — Post-Task Interviews
 
-*Braun & Clarke hybrid deductive/inductive thematic analysis of semi-structured post-task interview transcripts. 28 of 35 analyzed participants have a transcript (missing: P1, P13, P2, P4, P6, P9, PCD5 — not interviewed or not yet transcribed). 15 Explícita, 13 Implícita.*
+*Braun & Clarke hybrid deductive/inductive thematic analysis of semi-structured post-task interview transcripts. 28 of 35 analyzed participants have a transcript (missing: P20, P29, P21, P23, P24, P26, PCD5 — not interviewed or not yet transcribed). 15 Explícita, 13 Implícita.*
 
 ## 1. Method
 
@@ -22,12 +22,12 @@ Participants frequently framed errors, corrections, and struggle as **their own*
 
 | | Implícita | Explícita |
 |---|---|---|
-| Self-attributed correction/error/difficulty instances | **7** (M1, P3, PA11, PA6, PA8, PCD2, +1) | **2** (M2, PA2) |
+| Self-attributed correction/error/difficulty instances | **7** (P15, P22, PA11, PA6, PA8, PCD2, +1) | **2** (P16, PA2) |
 
 Representative quotes:
 - PCD2 (Implícita): *"Não me atrapalhou, não. Eu é que me atrapalhei."* ("It didn't get in my way. I was the one who got in my own way.") — the clearest instance in the dataset.
 - PA6 (Implícita): *"Que eu que estava a fazer errado... E que tinha de corrigir."* ("That I was the one doing it wrong... and that I had to correct it.")
-- P3 (Implícita): *"Dá as suas pistas... só que a minha memória é que não está boa."* ("It gives its clues... it's just that my memory isn't good.")
+- P22 (Implícita): *"Dá as suas pistas... só que a minha memória é que não está boa."* ("It gives its clues... it's just that my memory isn't good.")
 
 This is a genuinely direct piece of qualitative evidence for H1: participants in the Implicit condition more often describe themselves — not the robot — as the agent responsible for both catching and fixing problems, consistent with preserved self-attributed ownership over the task.
 
@@ -35,8 +35,8 @@ This is a genuinely direct piece of qualitative evidence for H1: participants in
 
 Almost every participant in both conditions affirmed the robot was useful (see 2.3), but **what they described as useful differed by condition** in a way that lines up with the manipulation itself:
 
-- **Implicit participants** described usefulness in **indirect, discovery-oriented** terms: spatial/directional cues (M4: *"da direita, da esquerda, do meio"*), memory-jogging (PA3: *"a ajuda que veio avivar-me a memória"*), verification (M1: *"posso me enganar, que ele ratifica"*), discovery (PA6: *"a descobrir onde é que era"*).
-- **Explicit participants** described usefulness in **direct, compliance/accuracy-oriented** terms: direct placement (M2: *"ajudar-me a pôr as cores no sítio certo"*), accuracy/trust (PA13: *"não me enganou"*), task-compliance (P14: *"aquilo que ele me pediu"*).
+- **Implicit participants** described usefulness in **indirect, discovery-oriented** terms: spatial/directional cues (P18: *"da direita, da esquerda, do meio"*), memory-jogging (PA3: *"a ajuda que veio avivar-me a memória"*), verification (P15: *"posso me enganar, que ele ratifica"*), discovery (PA6: *"a descobrir onde é que era"*).
+- **Explicit participants** described usefulness in **direct, compliance/accuracy-oriented** terms: direct placement (P16: *"ajudar-me a pôr as cores no sítio certo"*), accuracy/trust (PA13: *"não me enganou"*), task-compliance (P30: *"aquilo que ele me pediu"*).
 
 This convergence — participants' own account of *how* they were helped matching the actual condition assignment — functions as an independent, qualitative confirmation of the same manipulation the quantitative manipulation check already validated.
 
@@ -58,11 +58,11 @@ Direct qualitative evidence of participants actively inferring answers rather th
 
 ### 2.6 Personification
 
-Common in both conditions (P8, PA5, PA15, PA8, PCD1): several participants spontaneously described the robot "as if it were a person," including PCD1's *"tava ali uma pessoa que tava realmente a olhar para aquilo... eu já tava estranha"* (mild discomfort alongside the personification). Not a condition-differentiator, but relevant context for how socially participants engaged with the platform.
+Common in both conditions (P25, PA5, PA15, PA8, PCD1): several participants spontaneously described the robot "as if it were a person," including PCD1's *"tava ali uma pessoa que tava realmente a olhar para aquilo... eu já tava estranha"* (mild discomfort alongside the personification). Not a condition-differentiator, but relevant context for how socially participants engaged with the platform.
 
 ### 2.7 Cognitive/memory impairment disclosures
 
-Several participants spontaneously disclosed relevant context: Alzheimer's (PA10), a head injury affecting memory (PCD1), low prior schooling (PA11, only to 3rd grade), and self-described slow comprehension (PCD6, P12). Spread across both conditions — important sample context for interpreting difficulty-related codes, not a condition effect.
+Several participants spontaneously disclosed relevant context: Alzheimer's (PA10), a head injury affecting memory (PCD1), low prior schooling (PA11, only to 3rd grade), and self-described slow comprehension (PCD6, P28). Spread across both conditions — important sample context for interpreting difficulty-related codes, not a condition effect.
 
 ### 2.8 One-off but notable: desire for reciprocal interaction
 

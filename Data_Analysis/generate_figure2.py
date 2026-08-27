@@ -3,7 +3,7 @@ computed directly from the raw survey CSV via generate_report.py's subscale-scor
 logic -- no manually-transcribed numbers.
 
 Respects the same EXCLUDE_IDS env var as generate_report.py / run_tost.py / final_stats.py
-(e.g. EXCLUDE_IDS=P15), so re-running a sensitivity check regenerates this figure too.
+(e.g. EXCLUDE_IDS=P31), so re-running a sensitivity check regenerates this figure too.
 """
 
 import os

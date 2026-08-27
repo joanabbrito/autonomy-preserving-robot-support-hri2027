@@ -37,7 +37,7 @@ This repository shares the code and data needed to reproduce every statistic rep
 - Pre-study demographic fields that, combined with small per-site sample sizes, could support re-identification.
 - Any file mapping participant IDs to names.
 
-Participant IDs used throughout (e.g. `A3`, `P16`, `M2`) match those used in the paper and supplementary material.
+Participant IDs used throughout (e.g. `P3`, `P22`, `P32`) match those used in the paper and supplementary material.
 
 ## Reproducing the analysis
 

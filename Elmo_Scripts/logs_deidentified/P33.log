@@ -1,0 +1,821 @@
+[+0s] --- SESSION STARTED FOR: P17 ---
+[+0s] [UI] Started video recording to videos/P17.avi
+[+3s] [UI] Study Condition changed to: Explicit
+[+5s] [UI] Sequence Length changed to: 2
+[+7s] [UI] Clicked Intro
+[+7s] [STATE] Transitioning from IDLE to INTRO
+[+7s] [BEHAVIOR] say_intro triggered
+[+9s] [ROBOT] Play Sound: Intro.wav
+[+14s] [ROBOT] Play Sound: Instructions.wav
+[+27s] [ROBOT] Set Screen Image: normal.png
+[+27s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+29s] [STATE] Transitioning from INTRO to IDLE
+[+29s] [ROBOT] Set Screen Image: normal.png
+[+29s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+31s] [UI] Clicked New Sequence
+[+31s] [STATE] Transitioning from IDLE to NEW_SEQUENCE
+[+31s] [STATE] Trial index is now 1
+[+31s] [SEQUENCE] Length 2: Blocks ['Azul', 'Roxo'], Positions ['9', '2']
+[+33s] [ROBOT] Play Sound: PrimeiraSequencia.wav
+[+37s] [BEHAVIOR] say_sequence triggered for 2 items
+[+39s] [ROBOT] Set Screen Image: bloco_azul_posicao_9.png
+[+40s] [ROBOT] Play Sound: BlocoAzulPosicao9.wav
+[+44s] [ROBOT] Set Screen Image: bloco_roxo_posicao_2.png
+[+45s] [ROBOT] Play Sound: BlocoRoxoPosicao2.wav
+[+50s] [ROBOT] Set Screen Image: normal.png
+[+51s] [ROBOT] Play Sound: JaPodes3.wav
+[+54s] [ROBOT] Set Screen Image: normal.png
+[+54s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+55s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+55s] [STATE] Transitioning from NEW_SEQUENCE to IDLE
+[+55s] [ROBOT] Set Screen Image: normal.png
+[+55s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+62s] [UI] Board Clean toggled: False
+[+63s] [UI] Clicked New Sequence
+[+63s] [STATE] Transitioning from IDLE to NEW_SEQUENCE
+[+63s] [STATE] Announcing Sequence Finished before check
+[+63s] [STATE] Auto-incremented sequence length to 3
+[+63s] [ROBOT] Set Screen Image: love.png
+[+63s] [ROBOT] Play Sound: SequenciaTerminada3.wav
+[+67s] [ROBOT] Play Sound: Boa2.wav
+[+70s] [STATE] Transitioning from NEW_SEQUENCE to NEW_SEQUENCE
+[+70s] [STATE] New Sequence blocked: Board is not clean
+[+70s] [STATE] Transitioning from NEW_SEQUENCE to SAYING_BOARD_CLEAN
+[+70s] [ROBOT] Play Sound: LimpaTabuleiro1.wav
+[+71s] [ROBOT] Set Screen Image: normal.png
+[+74s] [STATE] Transitioning from SAYING_BOARD_CLEAN to IDLE
+[+74s] [ROBOT] Set Screen Image: normal.png
+[+75s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+83s] [UI] Board Clean toggled: True
+[+83s] [UI] Board Clean toggled: False
+[+84s] [UI] Clicked New Sequence
+[+84s] [STATE] Transitioning from IDLE to NEW_SEQUENCE
+[+84s] [STATE] New Sequence blocked: Board is not clean
+[+84s] [STATE] Transitioning from NEW_SEQUENCE to SAYING_BOARD_CLEAN
+[+84s] [ROBOT] Play Sound: LimpaTabuleiro3.wav
+[+88s] [STATE] Transitioning from SAYING_BOARD_CLEAN to IDLE
+[+89s] [ROBOT] Set Screen Image: normal.png
+[+89s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+98s] [UI] Board Clean toggled: True
+[+100s] [UI] Clicked New Sequence
+[+100s] [STATE] Transitioning from IDLE to NEW_SEQUENCE
+[+100s] [STATE] Trial index is now 2
+[+100s] [SEQUENCE] Length 3: Blocks ['Verde', 'Azul', 'Vermelho'], Positions ['1', '5', '9']
+[+102s] [ROBOT] Play Sound: ProximaSequencia1.wav
+[+105s] [BEHAVIOR] say_sequence triggered for 3 items
+[+108s] [ROBOT] Set Screen Image: bloco_verde_posicao_1.png
+[+108s] [ROBOT] Play Sound: BlocoVerdePosicao1.wav
+[+113s] [ROBOT] Set Screen Image: bloco_azul_posicao_5.png
+[+113s] [ROBOT] Play Sound: BlocoAzulPosicao5.wav
+[+118s] [ROBOT] Set Screen Image: bloco_vermelho_posicao_9.png
+[+119s] [ROBOT] Play Sound: BlocoVermelhoPosicao9.wav
+[+124s] [ROBOT] Set Screen Image: normal.png
+[+124s] [ROBOT] Play Sound: JaPodes2.wav
+[+128s] [ROBOT] Set Screen Image: normal.png
+[+128s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+128s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+128s] [STATE] Transitioning from NEW_SEQUENCE to IDLE
+[+128s] [ROBOT] Set Screen Image: normal.png
+[+128s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+137s] [UI] Board Clean toggled: False
+[+138s] [UI] Clicked New Sequence
+[+138s] [STATE] Transitioning from IDLE to NEW_SEQUENCE
+[+138s] [STATE] Announcing Sequence Finished before check
+[+138s] [STATE] Auto-incremented sequence length to 4
+[+138s] [ROBOT] Set Screen Image: love.png
+[+138s] [ROBOT] Play Sound: SequenciaTerminada3.wav
+[+142s] [ROBOT] Play Sound: Boa3.wav
+[+145s] [STATE] Transitioning from NEW_SEQUENCE to NEW_SEQUENCE
+[+145s] [STATE] New Sequence blocked: Board is not clean
+[+145s] [STATE] Transitioning from NEW_SEQUENCE to SAYING_BOARD_CLEAN
+[+145s] [ROBOT] Play Sound: LimpaTabuleiro3.wav
+[+146s] [ROBOT] Set Screen Image: normal.png
+[+149s] [STATE] Transitioning from SAYING_BOARD_CLEAN to IDLE
+[+149s] [ROBOT] Set Screen Image: normal.png
+[+149s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+156s] [UI] Board Clean toggled: True
+[+158s] [UI] Clicked New Sequence
+[+158s] [STATE] Transitioning from IDLE to NEW_SEQUENCE
+[+158s] [STATE] Trial index is now 3
+[+158s] [SEQUENCE] Length 4: Blocks ['Azul', 'Verde', 'Roxo', 'Vermelho'], Positions ['6', '7', '2', '1']
+[+160s] [ROBOT] Play Sound: ProximaSequencia3.wav
+[+163s] [BEHAVIOR] say_sequence triggered for 4 items
+[+166s] [ROBOT] Set Screen Image: bloco_azul_posicao_6.png
+[+167s] [ROBOT] Play Sound: BlocoAzulPosicao6.wav
+[+171s] [ROBOT] Set Screen Image: bloco_verde_posicao_7.png
+[+172s] [ROBOT] Play Sound: BlocoVerdePosicao7.wav
+[+176s] [ROBOT] Set Screen Image: bloco_roxo_posicao_2.png
+[+177s] [ROBOT] Play Sound: BlocoRoxoPosicao2.wav
+[+181s] [ROBOT] Set Screen Image: bloco_vermelho_posicao_1.png
+[+182s] [ROBOT] Play Sound: BlocoVermelhoPosicao1.wav
+[+187s] [ROBOT] Set Screen Image: normal.png
+[+188s] [ROBOT] Play Sound: JaPodes1.wav
+[+191s] [ROBOT] Set Screen Image: normal.png
+[+191s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+192s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+192s] [STATE] Transitioning from NEW_SEQUENCE to IDLE
+[+192s] [ROBOT] Set Screen Image: normal.png
+[+192s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+206s] [UI] Position P4 checkbox set to False
+[+206s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+206s] [STATE] Transitioning from IDLE to HESITANT_POSITION
+[+206s] [BEHAVIOR] hesitant_position triggered
+[+207s] [UI] Picked Up Cube toggled: True
+[+207s] [UI] Placed Cube toggled: True
+[+209s] [LOGIC] Check Gate: PickedUp=False, Placed=True, WrongBlock=False
+[+209s] [STATE] Transitioning from HESITANT_POSITION to INCORRECT_POSITION
+[+209s] [BEHAVIOR] incorrect_position triggered (PosIdx=4, Count=1)
+[+209s] [ROBOT] Set LEDs Icon: red.png
+[+210s] [ROBOT] Set Screen Image: thinking.png
+[+210s] [ROBOT] Play Sound: PosicaoErradaUpsVermelho_1.wav
+[+211s] [LOGIC] Check Gate: PickedUp=False, Placed=True, WrongBlock=False
+[+218s] [ROBOT] Set Screen Image: thinking.png
+[+218s] [ROBOT] Play Sound: VamosFocarVermelho2.wav
+[+221s] [ROBOT] Set Screen Image: thinking.png
+[+222s] [ROBOT] Play Sound: QueresPista1.wav
+[+224s] [ROBOT] Set Screen Image: posicao_1.png
+[+229s] [UI] Position P4 checkbox set to True
+[+229s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+229s] [STATE] Transitioning from INCORRECT_POSITION to IDLE
+[+229s] [ROBOT] Set Screen Image: normal.png
+[+229s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+230s] [ROBOT] Set Screen Image: normal.png
+[+233s] [UI] Position P2 checkbox set to False
+[+233s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+233s] [STATE] Transitioning from IDLE to HESITANT_POSITION
+[+234s] [BEHAVIOR] hesitant_position triggered
+[+234s] [UI] Picked Up Cube toggled: True
+[+235s] [UI] Placed Cube toggled: True
+[+237s] [LOGIC] Check Gate: PickedUp=False, Placed=True, WrongBlock=False
+[+237s] [STATE] Transitioning from HESITANT_POSITION to INCORRECT_POSITION
+[+237s] [BEHAVIOR] incorrect_position triggered (PosIdx=2, Count=1)
+[+237s] [ROBOT] Set LEDs Icon: green.png
+[+237s] [ROBOT] Set Screen Image: thinking.png
+[+237s] [ROBOT] Play Sound: PosicaoErradaUpsVerde_3.wav
+[+239s] [LOGIC] Check Gate: PickedUp=False, Placed=True, WrongBlock=False
+[+245s] [ROBOT] Set Screen Image: thinking.png
+[+245s] [ROBOT] Play Sound: VamosFocarVerde3.wav
+[+249s] [ROBOT] Set Screen Image: thinking.png
+[+249s] [ROBOT] Play Sound: QueresPista2.wav
+[+251s] [ROBOT] Set Screen Image: posicao_7.png
+[+256s] [ROBOT] Set Screen Image: thinking.png
+[+257s] [ROBOT] Set Screen Image: normal.png
+[+257s] [ROBOT] Play Sound: VamosFocarVerde1.wav
+[+260s] [ROBOT] Set Screen Image: thinking.png
+[+261s] [ROBOT] Play Sound: PodesMover7_2.wav
+[+261s] [STATE] Transitioning from INCORRECT_POSITION to IDLE
+[+261s] [ROBOT] Set Screen Image: normal.png
+[+261s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+271s] [UI] Position P2 checkbox set to True
+[+271s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+272s] [UI] Block B3 checkbox set to False
+[+272s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+272s] [STATE] Transitioning from IDLE to HESITANT_CUBE
+[+272s] [BEHAVIOR] hesitant_cube triggered
+[+276s] [ROBOT] Set Screen Image: tears.png
+[+276s] [ROBOT] Play Sound: FaltaQueresPista2.wav
+[+278s] [ROBOT] Set Screen Image: olhos_Roxo.png
+[+282s] [ROBOT] Set Screen Image: thinking.png
+[+282s] [ROBOT] Play Sound: BlocoRoxo_1.wav
+[+282s] [STATE] Transitioning from HESITANT_CUBE to IDLE
+[+282s] [ROBOT] Set Screen Image: normal.png
+[+282s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+284s] [UI] Block B3 checkbox set to True
+[+284s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+284s] [ROBOT] Set Screen Image: normal.png
+[+284s] [UI] Block B3 checkbox set to False
+[+284s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+284s] [STATE] Transitioning from IDLE to HESITANT_CUBE
+[+284s] [BEHAVIOR] hesitant_cube triggered
+[+288s] [ROBOT] Set Screen Image: tears.png
+[+289s] [ROBOT] Play Sound: FaltaQueresPista1.wav
+[+290s] [ROBOT] Set Screen Image: olhos_Roxo.png
+[+294s] [ROBOT] Set Screen Image: thinking.png
+[+295s] [ROBOT] Play Sound: BlocoRoxo_2.wav
+[+295s] [STATE] Transitioning from HESITANT_CUBE to IDLE
+[+295s] [ROBOT] Set Screen Image: normal.png
+[+295s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+296s] [ROBOT] Set Screen Image: normal.png
+[+302s] [UI] Block B3 checkbox set to True
+[+302s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+303s] [UI] Position P3 checkbox set to False
+[+303s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+303s] [STATE] Transitioning from IDLE to HESITANT_POSITION
+[+303s] [BEHAVIOR] hesitant_position triggered
+[+309s] [ROBOT] Set Screen Image: tears.png
+[+310s] [ROBOT] Play Sound: QueresPistaPosicao2.wav
+[+311s] [ROBOT] Set Screen Image: posicao_2.png
+[+317s] [ROBOT] Set Screen Image: thinking.png
+[+317s] [ROBOT] Set Screen Image: normal.png
+[+318s] [ROBOT] Play Sound: PodesMover2_2.wav
+[+326s] [STATE] Transitioning from HESITANT_POSITION to IDLE
+[+326s] [ROBOT] Set Screen Image: normal.png
+[+326s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+326s] [UI] Position P3 checkbox set to True
+[+326s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+327s] [UI] Board Clean toggled: False
+[+328s] [UI] Clicked New Sequence
+[+328s] [STATE] Transitioning from IDLE to NEW_SEQUENCE
+[+328s] [STATE] Announcing Sequence Finished before check
+[+328s] [STATE] Auto-incremented sequence length to 5
+[+328s] [ROBOT] Set Screen Image: love.png
+[+329s] [ROBOT] Play Sound: SequenciaTerminada1.wav
+[+332s] [ROBOT] Play Sound: Boa1.wav
+[+336s] [ROBOT] Set Screen Image: normal.png
+[+337s] [ROBOT] Play Sound: JaVaisAMeio.wav
+[+337s] [UI] Clicked Abort Current
+[+337s] [ROBOT] Stop All Audio invoked
+[+337s] [STATE] Transitioning from NEW_SEQUENCE to IDLE
+[+337s] [ROBOT] Set Screen Image: normal.png
+[+338s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+344s] [UI] Clicked New Sequence
+[+344s] [STATE] Transitioning from IDLE to NEW_SEQUENCE
+[+344s] [STATE] New Sequence blocked: Board is not clean
+[+344s] [STATE] Transitioning from NEW_SEQUENCE to SAYING_BOARD_CLEAN
+[+345s] [ROBOT] Play Sound: LimpaTabuleiro1.wav
+[+348s] [UI] Sequence Length changed to: 4
+[+349s] [STATE] Transitioning from SAYING_BOARD_CLEAN to IDLE
+[+349s] [ROBOT] Set Screen Image: normal.png
+[+349s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+353s] [UI] Board Clean toggled: True
+[+357s] [UI] Clicked New Sequence
+[+357s] [STATE] Transitioning from IDLE to NEW_SEQUENCE
+[+357s] [STATE] Trial index is now 4
+[+357s] [SEQUENCE] Length 4: Blocks ['Roxo', 'Verde', 'Vermelho', 'Azul'], Positions ['7', '6', '4', '1']
+[+359s] [ROBOT] Play Sound: ProximaSequencia2.wav
+[+362s] [BEHAVIOR] say_sequence triggered for 4 items
+[+365s] [ROBOT] Set Screen Image: bloco_roxo_posicao_7.png
+[+365s] [ROBOT] Play Sound: BlocoRoxoPosicao7.wav
+[+370s] [ROBOT] Set Screen Image: bloco_verde_posicao_6.png
+[+371s] [ROBOT] Play Sound: BlocoVerdePosicao6.wav
+[+375s] [ROBOT] Set Screen Image: bloco_vermelho_posicao_4.png
+[+376s] [ROBOT] Play Sound: BlocoVermelhoPosicao4.wav
+[+380s] [ROBOT] Set Screen Image: bloco_azul_posicao_1.png
+[+381s] [ROBOT] Play Sound: BlocoAzulPosicao1.wav
+[+386s] [ROBOT] Set Screen Image: normal.png
+[+386s] [ROBOT] Play Sound: JaPodes1.wav
+[+390s] [ROBOT] Set Screen Image: normal.png
+[+390s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+390s] [UI] Clicked Forgot Sequence
+[+390s] [STATE] Transitioning from NEW_SEQUENCE to FORGOT_SEQUENCE
+[+390s] [BEHAVIOR] forgot_sequence_behavior triggered
+[+390s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+390s] [STATE] Transitioning from FORGOT_SEQUENCE to IDLE
+[+390s] [ROBOT] Set Screen Image: normal.png
+[+391s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+392s] [ROBOT] Play Sound: SequenciaAssim1.wav
+[+399s] [ROBOT] Set Screen Image: bloco_roxo_posicao_7.png
+[+400s] [ROBOT] Play Sound: BlocoRoxoPosicao7.wav
+[+404s] [ROBOT] Set Screen Image: bloco_verde_posicao_6.png
+[+405s] [ROBOT] Play Sound: BlocoVerdePosicao6.wav
+[+410s] [ROBOT] Set Screen Image: bloco_vermelho_posicao_4.png
+[+410s] [ROBOT] Play Sound: BlocoVermelhoPosicao4.wav
+[+415s] [ROBOT] Set Screen Image: bloco_azul_posicao_1.png
+[+415s] [ROBOT] Play Sound: BlocoAzulPosicao1.wav
+[+420s] [ROBOT] Set Screen Image: normal.png
+[+421s] [ROBOT] Play Sound: PodesColocar1.wav
+[+425s] [ROBOT] Set Screen Image: normal.png
+[+425s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+433s] [UI] Board Clean toggled: False
+[+434s] [UI] Clicked New Sequence
+[+434s] [STATE] Transitioning from IDLE to NEW_SEQUENCE
+[+434s] [STATE] Announcing Sequence Finished before check
+[+434s] [STATE] Auto-incremented sequence length to 5
+[+434s] [ROBOT] Set Screen Image: love.png
+[+435s] [ROBOT] Play Sound: SequenciaTerminada3.wav
+[+437s] [UI] Clicked Abort Current
+[+437s] [ROBOT] Stop All Audio invoked
+[+437s] [STATE] Transitioning from NEW_SEQUENCE to IDLE
+[+437s] [ROBOT] Set Screen Image: normal.png
+[+438s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+439s] [UI] Clicked New Sequence
+[+439s] [STATE] Transitioning from IDLE to NEW_SEQUENCE
+[+439s] [STATE] New Sequence blocked: Board is not clean
+[+439s] [STATE] Transitioning from NEW_SEQUENCE to SAYING_BOARD_CLEAN
+[+439s] [ROBOT] Play Sound: LimpaTabuleiro3.wav
+[+443s] [STATE] Transitioning from SAYING_BOARD_CLEAN to IDLE
+[+443s] [ROBOT] Set Screen Image: normal.png
+[+443s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+444s] [UI] Board Clean toggled: True
+[+455s] [UI] Clicked New Sequence
+[+455s] [STATE] Transitioning from IDLE to NEW_SEQUENCE
+[+455s] [STATE] Trial index is now 5
+[+455s] [SEQUENCE] Length 5: Blocks ['Amarelo', 'Roxo', 'Azul', 'Verde', 'Vermelho'], Positions ['8', '2', '7', '1', '4']
+[+457s] [ROBOT] Play Sound: ProximaSequencia2.wav
+[+460s] [BEHAVIOR] say_sequence triggered for 5 items
+[+463s] [ROBOT] Set Screen Image: bloco_amarelo_posicao_8.png
+[+463s] [ROBOT] Play Sound: BlocoAmareloPosicao8.wav
+[+468s] [ROBOT] Set Screen Image: bloco_roxo_posicao_2.png
+[+468s] [ROBOT] Play Sound: BlocoRoxoPosicao2.wav
+[+473s] [ROBOT] Set Screen Image: bloco_azul_posicao_7.png
+[+473s] [ROBOT] Play Sound: BlocoAzulPosicao7.wav
+[+478s] [ROBOT] Set Screen Image: bloco_verde_posicao_1.png
+[+478s] [ROBOT] Play Sound: BlocoVerdePosicao1.wav
+[+483s] [ROBOT] Set Screen Image: bloco_vermelho_posicao_4.png
+[+484s] [ROBOT] Play Sound: BlocoVermelhoPosicao4.wav
+[+489s] [ROBOT] Set Screen Image: normal.png
+[+489s] [ROBOT] Play Sound: JaPodes1.wav
+[+493s] [ROBOT] Set Screen Image: normal.png
+[+493s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+493s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+493s] [STATE] Transitioning from NEW_SEQUENCE to IDLE
+[+493s] [ROBOT] Set Screen Image: normal.png
+[+493s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+504s] [UI] Position P1 checkbox set to False
+[+504s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+504s] [STATE] Transitioning from IDLE to HESITANT_POSITION
+[+504s] [BEHAVIOR] hesitant_position triggered
+[+506s] [UI] Position P1 checkbox set to True
+[+506s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+506s] [STATE] Transitioning from HESITANT_POSITION to IDLE
+[+506s] [ROBOT] Set Screen Image: normal.png
+[+506s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+508s] [UI] Position P1 checkbox set to False
+[+508s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+508s] [STATE] Transitioning from IDLE to HESITANT_POSITION
+[+508s] [BEHAVIOR] hesitant_position triggered
+[+508s] [UI] Picked Up Cube toggled: True
+[+509s] [UI] Placed Cube toggled: True
+[+511s] [LOGIC] Check Gate: PickedUp=False, Placed=True, WrongBlock=False
+[+511s] [STATE] Transitioning from HESITANT_POSITION to INCORRECT_POSITION
+[+511s] [BEHAVIOR] incorrect_position triggered (PosIdx=1, Count=1)
+[+511s] [ROBOT] Set LEDs Icon: [[255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89]]
+[+511s] [ROBOT] Set Screen Image: thinking.png
+[+512s] [ROBOT] Play Sound: PosicaoErradaUpsAmarelo_3.wav
+[+513s] [LOGIC] Check Gate: PickedUp=False, Placed=True, WrongBlock=False
+[+519s] [ROBOT] Set Screen Image: thinking.png
+[+520s] [ROBOT] Play Sound: VamosFocarAmarelo1.wav
+[+523s] [ROBOT] Set Screen Image: thinking.png
+[+524s] [ROBOT] Play Sound: QueresPista3.wav
+[+525s] [ROBOT] Set Screen Image: posicao_8.png
+[+529s] [UI] Position P1 checkbox set to True
+[+529s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+529s] [STATE] Transitioning from INCORRECT_POSITION to IDLE
+[+529s] [ROBOT] Set Screen Image: normal.png
+[+529s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+531s] [ROBOT] Set Screen Image: normal.png
+[+533s] [UI] Block B2 checkbox set to False
+[+533s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+533s] [STATE] Transitioning from IDLE to HESITANT_CUBE
+[+533s] [BEHAVIOR] hesitant_cube triggered
+[+534s] [UI] Picked Up Cube toggled: True
+[+534s] [UI] Placed Cube toggled: True
+[+536s] [LOGIC] Check Gate: PickedUp=False, Placed=True, WrongBlock=False
+[+536s] [STATE] Transitioning from HESITANT_CUBE to INCORRECT_CUBE
+[+536s] [BEHAVIOR] incorrect_cube triggered (BlockIdx=2, Count=1)
+[+536s] [ROBOT] Set LEDs Icon: 2.png
+[+536s] [ROBOT] Set Screen Image: thinking.png
+[+536s] [UI] Block B2 checkbox set to True
+[+536s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+536s] [STATE] Transitioning from INCORRECT_CUBE to IDLE
+[+536s] [ROBOT] Set Screen Image: normal.png
+[+537s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+537s] [ROBOT] Play Sound: BlocoErradoUpsPosicao2_1.wav
+[+538s] [UI] Block B3 checkbox set to False
+[+538s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+538s] [STATE] Transitioning from IDLE to HESITANT_CUBE
+[+538s] [BEHAVIOR] hesitant_cube triggered
+[+538s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+539s] [UI] Block B3 checkbox set to True
+[+539s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+539s] [STATE] Transitioning from HESITANT_CUBE to IDLE
+[+539s] [ROBOT] Set Screen Image: normal.png
+[+539s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+541s] [UI] Clicked Abort Current
+[+541s] [ROBOT] Stop All Audio invoked
+[+544s] [UI] Block B2 checkbox set to False
+[+544s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+544s] [STATE] Transitioning from IDLE to HESITANT_CUBE
+[+544s] [BEHAVIOR] hesitant_cube triggered
+[+548s] [ROBOT] Set Screen Image: tears.png
+[+549s] [ROBOT] Play Sound: FaltaQueresPista3.wav
+[+550s] [UI] Clicked Abort Current
+[+550s] [ROBOT] Stop All Audio invoked
+[+550s] [STATE] Transitioning from HESITANT_CUBE to IDLE
+[+550s] [ROBOT] Set Screen Image: normal.png
+[+550s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+558s] [UI] Block B2 checkbox set to True
+[+558s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+559s] [UI] Position P2 checkbox set to False
+[+559s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+559s] [STATE] Transitioning from IDLE to HESITANT_POSITION
+[+559s] [BEHAVIOR] hesitant_position triggered
+[+560s] [UI] Picked Up Cube toggled: True
+[+560s] [UI] Placed Cube toggled: True
+[+562s] [LOGIC] Check Gate: PickedUp=False, Placed=True, WrongBlock=False
+[+562s] [STATE] Transitioning from HESITANT_POSITION to INCORRECT_POSITION
+[+562s] [BEHAVIOR] incorrect_position triggered (PosIdx=2, Count=1)
+[+562s] [ROBOT] Set LEDs Icon: [[149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255], [149, 28, 255]]
+[+562s] [ROBOT] Set Screen Image: thinking.png
+[+563s] [ROBOT] Play Sound: PosicaoErradaUpsRoxo_1.wav
+[+564s] [LOGIC] Check Gate: PickedUp=False, Placed=True, WrongBlock=False
+[+570s] [ROBOT] Set Screen Image: thinking.png
+[+571s] [ROBOT] Play Sound: VamosFocarRoxo1.wav
+[+574s] [ROBOT] Set Screen Image: thinking.png
+[+574s] [ROBOT] Play Sound: QueresPista1.wav
+[+576s] [ROBOT] Set Screen Image: posicao_2.png
+[+581s] [UI] Position P2 checkbox set to True
+[+581s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+581s] [STATE] Transitioning from INCORRECT_POSITION to IDLE
+[+581s] [ROBOT] Set Screen Image: normal.png
+[+581s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+582s] [ROBOT] Set Screen Image: normal.png
+[+583s] [UI] Block B3 checkbox set to False
+[+583s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+583s] [STATE] Transitioning from IDLE to HESITANT_CUBE
+[+583s] [BEHAVIOR] hesitant_cube triggered
+[+587s] [ROBOT] Set Screen Image: tears.png
+[+588s] [ROBOT] Play Sound: FaltaQueresPista3.wav
+[+589s] [ROBOT] Set Screen Image: olhos_Azul.png
+[+593s] [ROBOT] Set Screen Image: thinking.png
+[+594s] [ROBOT] Play Sound: BlocoAzul_3.wav
+[+594s] [STATE] Transitioning from HESITANT_CUBE to IDLE
+[+594s] [ROBOT] Set Screen Image: normal.png
+[+594s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+595s] [ROBOT] Set Screen Image: normal.png
+[+602s] [UI] Block B3 checkbox set to True
+[+602s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+603s] [UI] Position P3 checkbox set to False
+[+603s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+603s] [STATE] Transitioning from IDLE to HESITANT_POSITION
+[+603s] [BEHAVIOR] hesitant_position triggered
+[+609s] [ROBOT] Set Screen Image: tears.png
+[+609s] [ROBOT] Play Sound: QueresPistaPosicao2.wav
+[+611s] [ROBOT] Set Screen Image: posicao_7.png
+[+617s] [ROBOT] Set Screen Image: thinking.png
+[+617s] [ROBOT] Set Screen Image: normal.png
+[+617s] [ROBOT] Play Sound: PodesMover7_3.wav
+[+625s] [UI] Position P3 checkbox set to True
+[+625s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+625s] [STATE] Transitioning from HESITANT_POSITION to IDLE
+[+625s] [ROBOT] Set Screen Image: normal.png
+[+625s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+626s] [UI] Block B4 checkbox set to False
+[+626s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+626s] [STATE] Transitioning from IDLE to HESITANT_CUBE
+[+626s] [BEHAVIOR] hesitant_cube triggered
+[+630s] [ROBOT] Set Screen Image: tears.png
+[+631s] [ROBOT] Play Sound: FaltaQueresPista2.wav
+[+632s] [ROBOT] Set Screen Image: olhos_Verde.png
+[+636s] [ROBOT] Set Screen Image: thinking.png
+[+636s] [ROBOT] Play Sound: BlocoVerde_1.wav
+[+636s] [STATE] Transitioning from HESITANT_CUBE to IDLE
+[+636s] [ROBOT] Set Screen Image: normal.png
+[+637s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+638s] [ROBOT] Set Screen Image: normal.png
+[+641s] [UI] Block B4 checkbox set to True
+[+641s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+642s] [UI] Position P4 checkbox set to False
+[+642s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+642s] [STATE] Transitioning from IDLE to HESITANT_POSITION
+[+642s] [BEHAVIOR] hesitant_position triggered
+[+643s] [UI] Position P4 checkbox set to True
+[+643s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+643s] [STATE] Transitioning from HESITANT_POSITION to IDLE
+[+643s] [ROBOT] Set Screen Image: normal.png
+[+643s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+645s] [UI] Position P4 checkbox set to False
+[+645s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+645s] [STATE] Transitioning from IDLE to HESITANT_POSITION
+[+645s] [BEHAVIOR] hesitant_position triggered
+[+651s] [ROBOT] Set Screen Image: tears.png
+[+651s] [ROBOT] Play Sound: QueresPistaPosicao2.wav
+[+653s] [ROBOT] Set Screen Image: posicao_1.png
+[+659s] [ROBOT] Set Screen Image: thinking.png
+[+659s] [ROBOT] Set Screen Image: normal.png
+[+659s] [ROBOT] Play Sound: PodesMover1_3.wav
+[+660s] [UI] Position P4 checkbox set to True
+[+660s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+660s] [STATE] Transitioning from HESITANT_POSITION to IDLE
+[+660s] [ROBOT] Set Screen Image: normal.png
+[+660s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+665s] [UI] Board Clean toggled: False
+[+666s] [UI] Clicked New Sequence
+[+666s] [STATE] Transitioning from IDLE to NEW_SEQUENCE
+[+666s] [STATE] Announcing Sequence Finished before check
+[+666s] [STATE] Auto-incremented sequence length to 6
+[+666s] [ROBOT] Set Screen Image: love.png
+[+667s] [ROBOT] Play Sound: SequenciaTerminada1.wav
+[+671s] [ROBOT] Play Sound: Boa3.wav
+[+674s] [STATE] Transitioning from NEW_SEQUENCE to NEW_SEQUENCE
+[+674s] [STATE] New Sequence blocked: Board is not clean
+[+674s] [STATE] Transitioning from NEW_SEQUENCE to SAYING_BOARD_CLEAN
+[+674s] [ROBOT] Play Sound: LimpaTabuleiro1.wav
+[+675s] [ROBOT] Set Screen Image: normal.png
+[+678s] [STATE] Transitioning from SAYING_BOARD_CLEAN to IDLE
+[+678s] [ROBOT] Set Screen Image: normal.png
+[+678s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+684s] [UI] Board Clean toggled: True
+[+689s] [UI] Sequence Length changed to: 5
+[+690s] [UI] Clicked New Sequence
+[+690s] [STATE] Transitioning from IDLE to NEW_SEQUENCE
+[+690s] [STATE] Trial index is now 6
+[+690s] [SEQUENCE] Length 5: Blocks ['Amarelo', 'Roxo', 'Vermelho', 'Verde', 'Azul'], Positions ['1', '4', '9', '8', '7']
+[+692s] [ROBOT] Play Sound: ProximaSequencia2.wav
+[+695s] [BEHAVIOR] say_sequence triggered for 5 items
+[+698s] [ROBOT] Set Screen Image: bloco_amarelo_posicao_1.png
+[+698s] [ROBOT] Play Sound: BlocoAmareloPosicao1.wav
+[+703s] [ROBOT] Set Screen Image: bloco_roxo_posicao_4.png
+[+703s] [ROBOT] Play Sound: BlocoRoxoPosicao4.wav
+[+708s] [ROBOT] Set Screen Image: bloco_vermelho_posicao_9.png
+[+709s] [ROBOT] Play Sound: BlocoVermelhoPosicao9.wav
+[+713s] [ROBOT] Set Screen Image: bloco_verde_posicao_8.png
+[+714s] [ROBOT] Play Sound: BlocoVerdePosicao8.wav
+[+718s] [ROBOT] Set Screen Image: bloco_azul_posicao_7.png
+[+719s] [ROBOT] Play Sound: BlocoAzulPosicao7.wav
+[+724s] [ROBOT] Set Screen Image: normal.png
+[+724s] [ROBOT] Play Sound: JaPodes1.wav
+[+727s] [UI] Clicked Forgot Sequence
+[+727s] [STATE] Transitioning from NEW_SEQUENCE to FORGOT_SEQUENCE
+[+727s] [BEHAVIOR] forgot_sequence_behavior triggered
+[+728s] [ROBOT] Set Screen Image: normal.png
+[+728s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+728s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+728s] [STATE] Transitioning from FORGOT_SEQUENCE to IDLE
+[+728s] [ROBOT] Set Screen Image: normal.png
+[+728s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+729s] [ROBOT] Play Sound: SequenciaAssim3.wav
+[+736s] [ROBOT] Set Screen Image: bloco_amarelo_posicao_1.png
+[+737s] [ROBOT] Play Sound: BlocoAmareloPosicao1.wav
+[+741s] [ROBOT] Set Screen Image: bloco_roxo_posicao_4.png
+[+742s] [ROBOT] Play Sound: BlocoRoxoPosicao4.wav
+[+746s] [ROBOT] Set Screen Image: bloco_vermelho_posicao_9.png
+[+747s] [ROBOT] Play Sound: BlocoVermelhoPosicao9.wav
+[+752s] [ROBOT] Set Screen Image: bloco_verde_posicao_8.png
+[+752s] [ROBOT] Play Sound: BlocoVerdePosicao8.wav
+[+757s] [ROBOT] Set Screen Image: bloco_azul_posicao_7.png
+[+757s] [ROBOT] Play Sound: BlocoAzulPosicao7.wav
+[+762s] [ROBOT] Set Screen Image: normal.png
+[+763s] [ROBOT] Play Sound: PodesColocar3.wav
+[+765s] [UI] Board Clean toggled: False
+[+766s] [UI] Clicked New Sequence
+[+766s] [STATE] Transitioning from IDLE to NEW_SEQUENCE
+[+766s] [STATE] Announcing Sequence Finished before check
+[+766s] [STATE] Auto-incremented sequence length to 6
+[+766s] [ROBOT] Set Screen Image: love.png
+[+766s] [ROBOT] Play Sound: SequenciaTerminada1.wav
+[+767s] [ROBOT] Set Screen Image: normal.png
+[+767s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+767s] [STATE] Transitioning from NEW_SEQUENCE to IDLE
+[+767s] [ROBOT] Set Screen Image: normal.png
+[+767s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+770s] [ROBOT] Play Sound: Boa1.wav
+[+773s] [STATE] Transitioning from IDLE to NEW_SEQUENCE
+[+773s] [STATE] New Sequence blocked: Board is not clean
+[+773s] [STATE] Transitioning from NEW_SEQUENCE to SAYING_BOARD_CLEAN
+[+773s] [ROBOT] Play Sound: LimpaTabuleiro2.wav
+[+774s] [ROBOT] Set Screen Image: normal.png
+[+777s] [STATE] Transitioning from SAYING_BOARD_CLEAN to IDLE
+[+777s] [ROBOT] Set Screen Image: normal.png
+[+777s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+783s] [UI] Board Clean toggled: True
+[+787s] [UI] Sequence Length changed to: 5
+[+788s] [UI] Clicked New Sequence
+[+788s] [STATE] Transitioning from IDLE to NEW_SEQUENCE
+[+788s] [STATE] Trial index is now 7
+[+788s] [SEQUENCE] Length 5: Blocks ['Amarelo', 'Roxo', 'Vermelho', 'Verde', 'Azul'], Positions ['8', '5', '3', '4', '6']
+[+790s] [ROBOT] Play Sound: ProximaSequencia3.wav
+[+793s] [BEHAVIOR] say_sequence triggered for 5 items
+[+796s] [ROBOT] Set Screen Image: bloco_amarelo_posicao_8.png
+[+796s] [ROBOT] Play Sound: BlocoAmareloPosicao8.wav
+[+801s] [ROBOT] Set Screen Image: bloco_roxo_posicao_5.png
+[+802s] [ROBOT] Play Sound: BlocoRoxoPosicao5.wav
+[+805s] [UI] Clicked Abort Current
+[+805s] [ROBOT] Stop All Audio invoked
+[+806s] [STATE] Transitioning from NEW_SEQUENCE to IDLE
+[+806s] [ROBOT] Set Screen Image: normal.png
+[+806s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+807s] [UI] Clicked Early Start
+[+807s] [STATE] Transitioning from IDLE to EARLY_START
+[+807s] [ROBOT] Set Screen Image: normal.png
+[+808s] [ROBOT] Play Sound: Espera3.wav
+[+812s] [STATE] Transitioning from EARLY_START to IDLE
+[+812s] [ROBOT] Set Screen Image: normal.png
+[+812s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+837s] [UI] Clicked New Sequence
+[+837s] [STATE] Transitioning from IDLE to NEW_SEQUENCE
+[+837s] [STATE] Trial index is now 8
+[+837s] [SEQUENCE] Length 5: Blocks ['Azul', 'Roxo', 'Amarelo', 'Verde', 'Vermelho'], Positions ['9', '2', '5', '3', '8']
+[+839s] [BEHAVIOR] say_sequence triggered for 5 items
+[+842s] [ROBOT] Set Screen Image: bloco_azul_posicao_9.png
+[+842s] [ROBOT] Play Sound: BlocoAzulPosicao9.wav
+[+847s] [ROBOT] Set Screen Image: bloco_roxo_posicao_2.png
+[+847s] [ROBOT] Play Sound: BlocoRoxoPosicao2.wav
+[+849s] [UI] Clicked Abort Current
+[+849s] [ROBOT] Stop All Audio invoked
+[+849s] [STATE] Transitioning from NEW_SEQUENCE to IDLE
+[+849s] [ROBOT] Set Screen Image: normal.png
+[+849s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+890s] [UI] Clicked New Sequence
+[+890s] [STATE] Transitioning from IDLE to NEW_SEQUENCE
+[+890s] [STATE] Announcing Sequence Finished before check
+[+890s] [STATE] Auto-incremented sequence length to 6
+[+890s] [ROBOT] Set Screen Image: love.png
+[+891s] [ROBOT] Play Sound: SequenciaTerminada3.wav
+[+892s] [UI] Clicked Abort Current
+[+892s] [ROBOT] Stop All Audio invoked
+[+892s] [STATE] Transitioning from NEW_SEQUENCE to IDLE
+[+892s] [ROBOT] Set Screen Image: normal.png
+[+892s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+895s] [UI] Sequence Length changed to: 5
+[+896s] [UI] Clicked New Sequence
+[+896s] [STATE] Transitioning from IDLE to NEW_SEQUENCE
+[+910s] [UI] Clicked Abort Current
+[+910s] [ROBOT] Stop All Audio invoked
+[+910s] [STATE] Transitioning from NEW_SEQUENCE to IDLE
+[+910s] [ROBOT] Set Screen Image: normal.png
+[+910s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+912s] [UI] Clicked Early Start
+[+912s] [STATE] Transitioning from IDLE to EARLY_START
+[+912s] [ROBOT] Set Screen Image: normal.png
+[+912s] [ROBOT] Play Sound: Espera3.wav
+[+913s] [UI] Clicked Abort Current
+[+913s] [ROBOT] Stop All Audio invoked
+[+913s] [STATE] Transitioning from EARLY_START to IDLE
+[+913s] [ROBOT] Set Screen Image: normal.png
+[+913s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+917s] [UI] Clicked New Sequence
+[+917s] [STATE] Transitioning from IDLE to NEW_SEQUENCE
+[+917s] [STATE] Trial index is now 9
+[+917s] [SEQUENCE] Length 5: Blocks ['Amarelo', 'Vermelho', 'Azul', 'Verde', 'Roxo'], Positions ['2', '3', '6', '1', '7']
+[+919s] [BEHAVIOR] say_sequence triggered for 5 items
+[+921s] [ROBOT] Set Screen Image: bloco_amarelo_posicao_2.png
+[+922s] [ROBOT] Play Sound: BlocoAmareloPosicao2.wav
+[+926s] [ROBOT] Set Screen Image: bloco_vermelho_posicao_3.png
+[+927s] [ROBOT] Play Sound: BlocoVermelhoPosicao3.wav
+[+932s] [ROBOT] Set Screen Image: bloco_azul_posicao_6.png
+[+932s] [ROBOT] Play Sound: BlocoAzulPosicao6.wav
+[+937s] [ROBOT] Set Screen Image: bloco_verde_posicao_1.png
+[+937s] [ROBOT] Play Sound: BlocoVerdePosicao1.wav
+[+942s] [ROBOT] Set Screen Image: bloco_roxo_posicao_7.png
+[+942s] [ROBOT] Play Sound: BlocoRoxoPosicao7.wav
+[+947s] [ROBOT] Set Screen Image: normal.png
+[+948s] [ROBOT] Play Sound: JaPodes2.wav
+[+952s] [ROBOT] Set Screen Image: normal.png
+[+952s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+952s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+952s] [STATE] Transitioning from NEW_SEQUENCE to IDLE
+[+952s] [ROBOT] Set Screen Image: normal.png
+[+952s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+982s] [UI] Position P1 checkbox set to False
+[+982s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+982s] [STATE] Transitioning from IDLE to HESITANT_POSITION
+[+982s] [BEHAVIOR] hesitant_position triggered
+[+983s] [UI] Picked Up Cube toggled: True
+[+983s] [UI] Placed Cube toggled: True
+[+985s] [LOGIC] Check Gate: PickedUp=False, Placed=True, WrongBlock=False
+[+985s] [STATE] Transitioning from HESITANT_POSITION to INCORRECT_POSITION
+[+985s] [BEHAVIOR] incorrect_position triggered (PosIdx=1, Count=1)
+[+985s] [ROBOT] Set LEDs Icon: [[255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89], [255, 222, 89]]
+[+985s] [ROBOT] Set Screen Image: thinking.png
+[+986s] [ROBOT] Play Sound: PosicaoErradaUpsAmarelo_2.wav
+[+987s] [LOGIC] Check Gate: PickedUp=False, Placed=True, WrongBlock=False
+[+993s] [ROBOT] Set Screen Image: thinking.png
+[+994s] [ROBOT] Play Sound: VamosFocarAmarelo1.wav
+[+997s] [ROBOT] Set Screen Image: thinking.png
+[+998s] [ROBOT] Play Sound: QueresPista2.wav
+[+999s] [ROBOT] Set Screen Image: posicao_2.png
+[+1005s] [ROBOT] Set Screen Image: thinking.png
+[+1005s] [ROBOT] Set Screen Image: normal.png
+[+1005s] [ROBOT] Play Sound: VamosFocarAmarelo3.wav
+[+1009s] [ROBOT] Set Screen Image: thinking.png
+[+1009s] [ROBOT] Play Sound: PodesMover2_2.wav
+[+1009s] [STATE] Transitioning from INCORRECT_POSITION to IDLE
+[+1009s] [ROBOT] Set Screen Image: normal.png
+[+1009s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+1017s] [UI] Position P1 checkbox set to True
+[+1017s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+1019s] [UI] Position P2 checkbox set to False
+[+1019s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+1019s] [STATE] Transitioning from IDLE to HESITANT_POSITION
+[+1019s] [BEHAVIOR] hesitant_position triggered
+[+1020s] [UI] Picked Up Cube toggled: True
+[+1020s] [UI] Placed Cube toggled: True
+[+1022s] [LOGIC] Check Gate: PickedUp=False, Placed=True, WrongBlock=False
+[+1022s] [STATE] Transitioning from HESITANT_POSITION to INCORRECT_POSITION
+[+1022s] [BEHAVIOR] incorrect_position triggered (PosIdx=2, Count=1)
+[+1022s] [ROBOT] Set LEDs Icon: red.png
+[+1022s] [ROBOT] Set Screen Image: thinking.png
+[+1023s] [ROBOT] Play Sound: PosicaoErradaUpsVermelho_3.wav
+[+1024s] [LOGIC] Check Gate: PickedUp=False, Placed=True, WrongBlock=False
+[+1026s] [UI] Position P2 checkbox set to True
+[+1026s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+1026s] [STATE] Transitioning from INCORRECT_POSITION to IDLE
+[+1026s] [ROBOT] Set Screen Image: normal.png
+[+1026s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+1035s] [UI] Position P2 checkbox set to False
+[+1035s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+1035s] [STATE] Transitioning from IDLE to HESITANT_POSITION
+[+1035s] [BEHAVIOR] hesitant_position triggered
+[+1036s] [UI] Picked Up Cube toggled: True
+[+1037s] [UI] Placed Cube toggled: True
+[+1039s] [LOGIC] Check Gate: PickedUp=False, Placed=True, WrongBlock=False
+[+1039s] [STATE] Transitioning from HESITANT_POSITION to INCORRECT_POSITION
+[+1039s] [BEHAVIOR] incorrect_position triggered (PosIdx=2, Count=2)
+[+1039s] [ROBOT] Set LEDs Icon: red.png
+[+1039s] [ROBOT] Set Screen Image: thinking.png
+[+1040s] [ROBOT] Play Sound: VamosFocarVermelho2.wav
+[+1041s] [LOGIC] Check Gate: PickedUp=False, Placed=True, WrongBlock=False
+[+1043s] [ROBOT] Set Screen Image: thinking.png
+[+1043s] [ROBOT] Play Sound: QueresPista2.wav
+[+1045s] [ROBOT] Set Screen Image: posicao_3.png
+[+1050s] [UI] Position P2 checkbox set to True
+[+1050s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+1050s] [STATE] Transitioning from INCORRECT_POSITION to IDLE
+[+1050s] [ROBOT] Set Screen Image: normal.png
+[+1050s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+1051s] [ROBOT] Set Screen Image: normal.png
+[+1052s] [UI] Block B3 checkbox set to False
+[+1052s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+1052s] [STATE] Transitioning from IDLE to HESITANT_CUBE
+[+1052s] [BEHAVIOR] hesitant_cube triggered
+[+1053s] [UI] Picked Up Cube toggled: True
+[+1053s] [UI] Placed Cube toggled: True
+[+1055s] [LOGIC] Check Gate: PickedUp=False, Placed=True, WrongBlock=False
+[+1055s] [STATE] Transitioning from HESITANT_CUBE to INCORRECT_CUBE
+[+1055s] [BEHAVIOR] incorrect_cube triggered (BlockIdx=3, Count=1)
+[+1055s] [ROBOT] Set LEDs Icon: 6.png
+[+1055s] [ROBOT] Set Screen Image: thinking.png
+[+1056s] [ROBOT] Play Sound: BlocoErradoUpsPosicao6_2.wav
+[+1057s] [LOGIC] Check Gate: PickedUp=False, Placed=True, WrongBlock=False
+[+1060s] [UI] Block B3 checkbox set to True
+[+1060s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+1060s] [STATE] Transitioning from INCORRECT_CUBE to IDLE
+[+1060s] [ROBOT] Set Screen Image: normal.png
+[+1060s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+1062s] [UI] Block B5 checkbox set to False
+[+1062s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+1062s] [STATE] Transitioning from IDLE to HESITANT_CUBE
+[+1062s] [BEHAVIOR] hesitant_cube triggered
+[+1063s] [UI] Picked Up Cube toggled: True
+[+1063s] [UI] Placed Cube toggled: True
+[+1065s] [LOGIC] Check Gate: PickedUp=False, Placed=True, WrongBlock=False
+[+1065s] [STATE] Transitioning from HESITANT_CUBE to INCORRECT_CUBE
+[+1065s] [BEHAVIOR] incorrect_cube triggered (BlockIdx=5, Count=1)
+[+1065s] [ROBOT] Set LEDs Icon: 7.png
+[+1065s] [ROBOT] Set Screen Image: thinking.png
+[+1066s] [ROBOT] Play Sound: BlocoErradoUpsPosicao7_2.wav
+[+1067s] [LOGIC] Check Gate: PickedUp=False, Placed=True, WrongBlock=False
+[+1071s] [UI] Block B5 checkbox set to True
+[+1071s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+1071s] [STATE] Transitioning from INCORRECT_CUBE to IDLE
+[+1071s] [ROBOT] Set Screen Image: normal.png
+[+1071s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+1080s] [UI] Position P5 checkbox set to False
+[+1080s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+1080s] [STATE] Transitioning from IDLE to HESITANT_POSITION
+[+1080s] [BEHAVIOR] hesitant_position triggered
+[+1086s] [ROBOT] Set Screen Image: tears.png
+[+1087s] [ROBOT] Play Sound: QueresPistaPosicao1.wav
+[+1088s] [ROBOT] Set Screen Image: posicao_7.png
+[+1094s] [ROBOT] Set Screen Image: thinking.png
+[+1094s] [ROBOT] Set Screen Image: normal.png
+[+1095s] [UI] Position P5 checkbox set to True
+[+1095s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+1095s] [STATE] Transitioning from HESITANT_POSITION to IDLE
+[+1095s] [ROBOT] Set Screen Image: normal.png
+[+1095s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+1095s] [ROBOT] Play Sound: PodesMover7_3.wav
+[+1099s] [UI] Position P3 checkbox set to False
+[+1099s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+1099s] [STATE] Transitioning from IDLE to HESITANT_POSITION
+[+1099s] [BEHAVIOR] hesitant_position triggered
+[+1101s] [UI] Position P3 checkbox set to True
+[+1101s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+1101s] [STATE] Transitioning from HESITANT_POSITION to IDLE
+[+1101s] [ROBOT] Set Screen Image: normal.png
+[+1101s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+1120s] [UI] Position P3 checkbox set to False
+[+1120s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+1120s] [STATE] Transitioning from IDLE to HESITANT_POSITION
+[+1120s] [BEHAVIOR] hesitant_position triggered
+[+1127s] [ROBOT] Set Screen Image: tears.png
+[+1127s] [ROBOT] Play Sound: QueresPistaPosicao3.wav
+[+1129s] [ROBOT] Set Screen Image: posicao_6.png
+[+1135s] [ROBOT] Set Screen Image: thinking.png
+[+1135s] [ROBOT] Set Screen Image: normal.png
+[+1135s] [ROBOT] Play Sound: PodesMover6_2.wav
+[+1139s] [UI] Position P3 checkbox set to True
+[+1139s] [LOGIC] Check Gate: PickedUp=False, Placed=False, WrongBlock=False
+[+1139s] [STATE] Transitioning from HESITANT_POSITION to IDLE
+[+1139s] [ROBOT] Set Screen Image: normal.png
+[+1139s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+1142s] [UI] Board Clean toggled: False
+[+1143s] [UI] Clicked New Sequence
+[+1143s] [STATE] Transitioning from IDLE to NEW_SEQUENCE
+[+1143s] [STATE] Announcing Sequence Finished before check
+[+1143s] [STATE] Auto-incremented sequence length to 6
+[+1143s] [ROBOT] Set Screen Image: love.png
+[+1143s] [ROBOT] Play Sound: SequenciaTerminada2.wav
+[+1147s] [ROBOT] Play Sound: Boa2.wav
+[+1148s] [UI] Clicked Abort Current
+[+1148s] [ROBOT] Stop All Audio invoked
+[+1148s] [STATE] Transitioning from NEW_SEQUENCE to IDLE
+[+1148s] [ROBOT] Set Screen Image: normal.png
+[+1148s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+1149s] [UI] Clicked Say Bye
+[+1149s] [STATE] Transitioning from IDLE to SAY_GOODBYE
+[+1149s] [STATE] Transitioning from SAY_GOODBYE to IDLE
+[+1149s] [ROBOT] Set Screen Image: normal.png
+[+1149s] [ROBOT] Set LEDs Icon: elmo_idm.png
+[+1150s] [ROBOT] Play Sound: Goodbye.wav

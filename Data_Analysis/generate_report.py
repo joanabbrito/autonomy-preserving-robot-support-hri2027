@@ -13,7 +13,7 @@ path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "raw_data_deiden
 with open(path, newline="", encoding="utf-8") as f:
     orig_header = next(csv_module.reader(f))  # raw question text, before pandas dedup-renames duplicates
 
-# Sensitivity-check exclusion: set via EXCLUDE_IDS env var, comma-separated (e.g. EXCLUDE_IDS=P15).
+# Sensitivity-check exclusion: set via EXCLUDE_IDS env var, comma-separated (e.g. EXCLUDE_IDS=P31).
 # Filtering df here, before anything downstream is derived from it (cond, main_ids_df, and by
 # extension manip_merged/log_merged via their merges), propagates the exclusion consistently
 # through every stage: self-report subscales, manipulation check, and behavioral log metrics.
@@ -358,23 +358,24 @@ pre = pd.read_csv(pre_path, header=0)
 pre.columns = range(pre.shape[1])
 pre[1] = pre[1].str.strip()
 
-# manual corrections per confirmed participant identity checks:
-# - P6: same participant, not two people (her two submissions are deduplicated below; the
+# manual corrections per confirmed participant identity checks (IDs below are current,
+# post-remap; see git history for the prior site-lettered IDs these correspond to):
+# - P24: same participant, not two people (her two submissions are deduplicated below; the
 #   original age-field correction between them is not applicable here since age is not part
 #   of this de-identified dataset).
-# - A1: second (duplicate) submission is a different, unrelated person -> drop it, keep entry 1
-# - P10: second submission is actually participant A10, mislabeled -> relabel
-# - P14: second submission is actually participant A14, mislabeled -> relabel
+# - P1: second (duplicate) submission is a different, unrelated person -> drop it, keep entry 1
+# - P27: second submission is actually participant P10, mislabeled -> relabel
+# - P30: second submission is actually participant P14, mislabeled -> relabel
 def fix_prestudy(pre):
     pre = pre.copy()
-    p6_idx = pre.index[pre[1].str.upper() == "P6"].tolist()
+    p6_idx = pre.index[pre[1].str.upper() == "P24"].tolist()
     drop_idx = list(p6_idx[1:])
-    for id_ in ["A1"]:
+    for id_ in ["P1"]:
         idx = pre.index[pre[1].str.upper() == id_].tolist()
         if len(idx) > 1:
             drop_idx.extend(idx[1:])
     pre = pre.drop(index=drop_idx)
-    for id_, relabel in [("P10", "A10"), ("P14", "A14")]:
+    for id_, relabel in [("P27", "P10"), ("P30", "P14")]:
         idx = pre.index[pre[1].str.upper() == id_].tolist()
         if len(idx) > 1:
             pre.loc[idx[1], 1] = relabel
@@ -430,10 +431,10 @@ def fmt_counts_top(vc, total, min_count=2):
 demographics_paragraph = f"""Background data were available for {n_demo_matched} of the {n_demo_total} analyzed participants (matched by participant ID after correcting 2 duplicate-ID data entry conflicts and 2 ID mislabelings identified during matching — see below). Age, sex, and education are not included in this de-identified dataset. Self-rated confidence using a computer, tablet, and phone (1-5 scale) averaged M={comp_conf.mean():.2f} (SD={comp_conf.std():.2f}), M={tablet_conf.mean():.2f} (SD={tablet_conf.std():.2f}), and M={phone_conf.mean():.2f} (SD={phone_conf.std():.2f}) respectively. Smartphone ownership: {fmt_counts(smartphone_counts, smartphone_counts.sum())}. Prior experience with robots: {fmt_counts(robot_exp_counts, robot_exp_counts.sum())}."""
 
 demographics_datacleaning_note = """**ID conflicts resolved in the prestudy file:**
-- P6 submitted twice; both submissions are the same participant, deduplicated to one row (the age-based correction used in the original, non-de-identified analysis does not apply here since age is not part of this dataset).
-- A1 had two conflicting submissions under the same ID (different ages/occupations, consistent with two different people) — the second, unrelated submission was dropped, keeping the first.
-- P10's second submission was confirmed to actually belong to participant A10 (mislabeled at data entry) — relabeled accordingly.
-- P14's second submission was confirmed to actually belong to participant A14 (mislabeled at data entry) — relabeled accordingly; A14 is not part of the 35 analyzed participants, so this entry does not appear in the demographics above."""
+- P24 submitted twice; both submissions are the same participant, deduplicated to one row (the age-based correction used in the original, non-de-identified analysis does not apply here since age is not part of this dataset).
+- P1 had two conflicting submissions under the same ID (different ages/occupations, consistent with two different people) — the second, unrelated submission was dropped, keeping the first.
+- P27's second submission was confirmed to actually belong to participant P10 (mislabeled at data entry) — relabeled accordingly.
+- P30's second submission was confirmed to actually belong to participant P14 (mislabeled at data entry) — relabeled accordingly; that participant is not part of the 35 analyzed participants, so this entry does not appear in the demographics above."""
 
 # ============================================================
 # Manipulation check
@@ -457,14 +458,14 @@ manip_items = [3, 4, 5, 6, 7]
 # single-item Perceived Autonomy measure, decoupled from the manipulation-check gate
 # exclusion below -- see that block for why.
 #
-# P15 answered "strongly disagree" to the gate item (col 3: "the robot gave me hints"),
+# P31 answered "strongly disagree" to the gate item (col 3: "the robot gave me hints"),
 # contradicting the actual delivered condition. The survey did not implement real skip logic,
 # so their items 4-7 were still recorded (all "1", a flat/uninformative pattern across items
 # that are designed to move in opposite directions). Excluded from items 4-7 as inapplicable
 # by their own gate answer; kept in item 3 itself, since everyone answered that one and their
 # "no" is the relevant data point. A sensitivity check confirmed this changes no conclusion
 # (effect sizes get slightly larger without them; the one non-significant item stays non-significant).
-GATE_EXCLUDED_ID = "P15"
+GATE_EXCLUDED_ID = "P31"
 
 def manip_group_compare():
     rows = []
@@ -1147,7 +1148,7 @@ Each item is rated on a 1-5 scale and analyzed individually (not combined into a
 
 **Interpretation:** a significant, correctly-directed difference on the explicit/implicit-wording items would confirm participants experienced the two conditions as intended (a manipulation check in the traditional sense).
 
-Column 8 (*"Quando o robô me deu uma pista ainda tive de descobrir a resposta por mim próprio/a"* — "I still had to figure out the answer myself") is reported separately as a single-item Perceived Autonomy measure alongside the self-report dimensions (Section 5), not as a manipulation-check item -- it uses the full sample (n={perceived_autonomy_result['n_imp']}/{perceived_autonomy_result['n_exp']}), unlike items 4-7 above, since P15's flat response is a genuine (if extreme) answer to this specific item rather than an uninterpretable one: Implicit {perceived_autonomy_result['m_imp']:.2f}±{perceived_autonomy_result['sd_imp']/np.sqrt(perceived_autonomy_result['n_imp']):.2f}, Explicit {perceived_autonomy_result['m_exp']:.2f}±{perceived_autonomy_result['sd_exp']/np.sqrt(perceived_autonomy_result['n_exp']):.2f}, {perceived_autonomy_result['test']} stat={perceived_autonomy_result['stat']:.2f}, p={perceived_autonomy_result['p']:.5f}, {perceived_autonomy_result['eff_label']}={perceived_autonomy_result['eff']:.2f}. It also complements the multi-item Choice/Autonomy subscales in Section 5 whose reliability is poor.
+Column 8 (*"Quando o robô me deu uma pista ainda tive de descobrir a resposta por mim próprio/a"* — "I still had to figure out the answer myself") is reported separately as a single-item Perceived Autonomy measure alongside the self-report dimensions (Section 5), not as a manipulation-check item -- it uses the full sample (n={perceived_autonomy_result['n_imp']}/{perceived_autonomy_result['n_exp']}), unlike items 4-7 above, since P31's flat response is a genuine (if extreme) answer to this specific item rather than an uninterpretable one: Implicit {perceived_autonomy_result['m_imp']:.2f}±{perceived_autonomy_result['sd_imp']/np.sqrt(perceived_autonomy_result['n_imp']):.2f}, Explicit {perceived_autonomy_result['m_exp']:.2f}±{perceived_autonomy_result['sd_exp']/np.sqrt(perceived_autonomy_result['n_exp']):.2f}, {perceived_autonomy_result['test']} stat={perceived_autonomy_result['stat']:.2f}, p={perceived_autonomy_result['p']:.5f}, {perceived_autonomy_result['eff_label']}={perceived_autonomy_result['eff']:.2f}. It also complements the multi-item Choice/Autonomy subscales in Section 5 whose reliability is poor.
 
 ## 8. Task performance from game logs
 
@@ -1180,9 +1181,9 @@ Session logs from `Elmo_Scripts/logs/` were parsed directly (no video coding nee
 
 ## 9. Thematic analysis of post-task interviews (summary)
 
-Full analysis in `Thematic_Analysis_Report.md`, coded excerpts in `thematic_coded_excerpts.csv` (same folder). 28 of {n_total} analyzed participants have a post-task interview transcript (missing: P1, P13, P2, P4, P6, P9, P18). Hybrid deductive/inductive thematic analysis (Braun & Clarke), coded excerpt-by-excerpt against a small starter codebook plus inductive additions — **not blind-coded** (condition was visible during coding), single analyst, no second-coder reliability check; treat as directional, not statistically tested.
+Full analysis in `Thematic_Analysis_Report.md`, coded excerpts in `thematic_coded_excerpts.csv` (same folder). 28 of {n_total} analyzed participants have a post-task interview transcript (missing: P20, P29, P21, P23, P24, P26, P34). Hybrid deductive/inductive thematic analysis (Braun & Clarke), coded excerpt-by-excerpt against a small starter codebook plus inductive additions — **not blind-coded** (condition was visible during coding), single analyst, no second-coder reliability check; treat as directional, not statistically tested.
 
-**Headline finding, most directly relevant to H1**: participants attributed responsibility for catching and fixing their own errors to *themselves* (not the robot) far more often in Implicit transcripts (7 instances) than Explicit ones (2 instances) — e.g. P16 (Implicit): *"Não me atrapalhou, não. Eu é que me atrapalhei"* ("It didn't get in my way. I was the one who got in my own way."). This is direct qualitative evidence of preserved self-attributed ownership under indirect hints, independent of the quantitative scales.
+**Headline finding, most directly relevant to H1**: participants attributed responsibility for catching and fixing their own errors to *themselves* (not the robot) far more often in Implicit transcripts (7 instances) than Explicit ones (2 instances) — e.g. P32 (Implicit): *"Não me atrapalhou, não. Eu é que me atrapalhei"* ("It didn't get in my way. I was the one who got in my own way."). This is direct qualitative evidence of preserved self-attributed ownership under indirect hints, independent of the quantitative scales.
 
 **Supporting findings**: (1) participants' own description of *what* was useful tracked the actual hint style — Implicit participants described indirect, discovery-oriented help (spatial cues, memory-jogging), Explicit participants described direct, compliance-oriented help (being told exactly where to place, trusted accuracy) — functioning as a qualitative confirmation of the manipulation alongside the quantitative one. (2) Hindrance was rarely reported in either condition, converging with the quantitative manipulation check. (3) Two concrete, actionable design leads emerged regardless of condition: overlapping/simultaneous cues caused confusion for one participant, and hint timing relative to sequence length caused another (who disclosed a memory-affecting head injury) to forget earlier items before later hints arrived — worth considering for adapting hint pacing to individual memory capacity in future iterations.
 
