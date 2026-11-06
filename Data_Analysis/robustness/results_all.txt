@@ -1,0 +1,134 @@
+######## 01_ancova_hints_duration.py
+N 35  missing: {'single_item': 0, 'IMI_Competence': 0, 'BPNSS_Autonomy': 0, 'n_hints': 0, 'duration_min': 0}
+corr totalhints~duration r=0.55 ; totalhints~episodes r=0.87
+total_subhints by cond: {'mean': {'Explícita': 36.24, 'Implícita': 50.44}, 'std': {'Explícita': 9.86, 'Implícita': 18.46}}
+hints by cond: {'mean': {'Explícita': 27.5, 'Implícita': 32.9}, 'std': {'Explícita': 6.8, 'Implícita': 13.3}}
+duration by cond: {'mean': {'Explícita': 18.18, 'Implícita': 19.67}, 'std': {'Explícita': 2.46, 'Implícita': 2.33}}
+
+== single_item 
+  raw                  n=35 Implicit-Explicit b=+2.788 (SE 0.436)  p=0.000  adj.d=+2.16
+  +episodes            n=35 Implicit-Explicit b=+2.644 (SE 0.446)  p=0.000  adj.d=+2.07
+  +totalhints          n=35 Implicit-Explicit b=+2.523 (SE 0.481)  p=0.000  adj.d=+1.98
+  +duration            n=35 Implicit-Explicit b=+2.748 (SE 0.464)  p=0.000  adj.d=+2.10
+  +totalhints+duration n=35 Implicit-Explicit b=+2.538 (SE 0.489)  p=0.000  adj.d=+1.96
+
+== single_item (ranked)
+  raw                  n=35 Implicit-Explicit b=+13.668 (SE 2.170)  p=0.000  adj.d=+2.13
+  +episodes            n=35 Implicit-Explicit b=+12.663 (SE 2.164)  p=0.000  adj.d=+2.04
+  +totalhints          n=35 Implicit-Explicit b=+11.677 (SE 2.321)  p=0.000  adj.d=+1.90
+  +duration            n=35 Implicit-Explicit b=+13.287 (SE 2.304)  p=0.000  adj.d=+2.05
+  +totalhints+duration n=35 Implicit-Explicit b=+11.762 (SE 2.359)  p=0.000  adj.d=+1.88
+
+== BPNSS_Autonomy 
+  raw                  n=35 Implicit-Explicit b=+0.461 (SE 0.212)  p=0.037  adj.d=+0.74
+  +episodes            n=35 Implicit-Explicit b=+0.567 (SE 0.209)  p=0.011  adj.d=+0.95
+  +totalhints          n=35 Implicit-Explicit b=+0.650 (SE 0.227)  p=0.007  adj.d=+1.08
+  +duration            n=35 Implicit-Explicit b=+0.619 (SE 0.206)  p=0.005  adj.d=+1.07
+  +totalhints+duration n=35 Implicit-Explicit b=+0.682 (SE 0.220)  p=0.004  adj.d=+1.17
+
+== IMI_Competence 
+  raw                  n=35 Implicit-Explicit b=+0.820 (SE 0.418)  p=0.058  adj.d=+0.66
+  +episodes            n=35 Implicit-Explicit b=+0.776 (SE 0.437)  p=0.085  adj.d=+0.62
+  +totalhints          n=35 Implicit-Explicit b=+0.788 (SE 0.472)  p=0.105  adj.d=+0.63
+  +duration            n=35 Implicit-Explicit b=+0.859 (SE 0.445)  p=0.062  adj.d=+0.69
+  +totalhints+duration n=35 Implicit-Explicit b=+0.804 (SE 0.480)  p=0.104  adj.d=+0.63
+
+######## 02_site_adjusted.py
+[02_site_adjusted] skipped: participant_site.csv not found (withheld for privacy, see the docstring).
+
+######## 03_tost_equivalence.py
+metric                      diff(I-E)           90%CI diff      d          90%CI d TOST p@.5  min bound d (p<.05)
+Assisted performance           -0.035 [ -0.104,  0.034]    -0.29 [-0.87, 0.28]      0.273  0.87
+Independent performance         0.003 [ -0.080,  0.087]     0.02 [-0.55, 0.60]      0.084  0.6
+Assisted max length             0.206 [ -0.446,  0.858]     0.18 [-0.40, 0.76]      0.177  0.76
+Independent max length          0.105 [ -0.828,  1.037]     0.07 [-0.52, 0.65]      0.104  0.64
+Trials                         -0.036 [ -1.829,  1.757]    -0.01 [-0.59, 0.57]      0.079  0.59
+
+######## 04_corsi_analysis.py
+N with Corsi: 32 | missing: ['P31', 'P32', 'P33']
+Corsi (last run): M=2.88 SD=1.72, zeros=6 (19%)
+
+1. Corsi score by condition
+last-run rule (used in the paper): Implicit M=3.00 (SD 1.50, n=17, zeros=2) vs Explicit M=2.73 (SD 1.98, n=15, zeros=4); Welch p=0.674 d=+0.15; MWU p=0.907
+best-run rule: Implicit M=3.18 (SD 1.29, n=17, zeros=1) vs Explicit M=2.73 (SD 1.98, n=15, zeros=4); Welch p=0.467 d=+0.27; MWU p=0.755
+
+2. Spearman correlations of Corsi (last run) with outcomes, n=32
+  single_item                rho=+0.03 p=0.875
+  BPNSS_Autonomy             rho=+0.22 p=0.224
+  IMI_Competence             rho=-0.16 p=0.384
+  performance_rate_assisted  rho=+0.09 p=0.614
+  max_len_assisted           rho=+0.05 p=0.799
+
+3. Condition effect (Implicit - Explicit) without and with the Corsi score, n=32
+  single_item      unadj b=+2.65 p=0.000 | +Corsi b=+2.66 p=0.000
+  BPNSS_Autonomy   unadj b=+0.52 p=0.026 | +Corsi b=+0.50 p=0.032
+  IMI_Competence   unadj b=+0.60 p=0.163 | +Corsi b=+0.62 p=0.159
+
+4. Condition x Corsi interaction (Corsi centered at its mean 2.88), n=32
+  single_item      interaction b=+0.005 (SE 0.295) p=0.987
+  BPNSS_Autonomy   interaction b=+0.011 (SE 0.135) p=0.938
+  IMI_Competence   interaction b=-0.058 (SE 0.263) p=0.825
+
+######## 05_corsi_game_metric_correlations.py
+n with Corsi and logs: 32
+metric                                   n   pearson r  p     spearman rho  p
+n_trials                                 32  -0.14  0.460   -0.16  0.374
+max_len_attempted                        32  +0.09  0.607   +0.11  0.560
+n_successes                              32  -0.11  0.558   -0.18  0.335
+max_len_completed                        32  +0.11  0.556   +0.10  0.574
+max_len_assisted                         32  +0.07  0.691   +0.05  0.799
+max_len_independent                      32  -0.11  0.537   -0.14  0.450
+n_successes_assisted                     32  -0.11  0.558   -0.18  0.335
+n_successes_independent                  32  +0.00  0.990   -0.03  0.882
+performance_rate_assisted                32  +0.05  0.781   +0.09  0.614
+performance_rate_independent             32  +0.03  0.853   +0.01  0.977
+n_manual_resets                          32  -0.21  0.260   -0.27  0.132
+n_hints                                  32  -0.09  0.617   -0.11  0.562
+hints_per_trial                          32  +0.04  0.825   -0.01  0.977
+mean_ladder_fraction                     32  -0.14  0.439   -0.09  0.636
+mean_raw_delivered                       32  +0.01  0.960   +0.09  0.628
+n_ladder_episodes                        32  -0.10  0.603   -0.12  0.529
+mean_hint_latency_sec                    32  +0.20  0.280   +0.11  0.538
+n_touched_wrong                          32  -0.00  0.988   -0.09  0.622
+hint_trend_slope                         32  +0.22  0.228   +0.20  0.283
+hint_trend_slope_normalized              32  +0.21  0.259   +0.15  0.398
+duration_min                             32  -0.16  0.393   -0.12  0.501
+max |pearson r|: 0.22 (min p 0.228) | max |spearman rho|: 0.27 (min p 0.132)
+
+######## 06_sequence_override_rate.py
+participants 35
+trials 367 | auto-increment opportunities 213 | overridden 122 | rate over opportunities 57.3% | over all trials 33.2%
+Explicit n=17 opps 106 overridden 62 rate 58.5%
+Implicit n=18 opps 107 overridden 60 rate 56.1%
+
+######## 07_manipulation_check_sensitivity.py
+participant removed from the gated items: condition = ['Explícita'] | answers to items 1-5 and the single item: [[1.0, 1.0, 1.0, 1.0, 1.0, 1.0]]
+
+Part A: manipulation check items by condition
+1 gate
+   participant removed  nI=18 nE=17 MI=4.94+/-0.06 ME=4.76+/-0.24 U=154.0 p=0.967 r=0.01
+   participant included nI=18 nE=17 MI=4.94+/-0.06 ME=4.76+/-0.24 U=154.0 p=0.967 r=0.01
+2 explicit
+   participant removed  nI=18 nE=16 MI=1.83+/-0.38 ME=4.56+/-0.30 U=36.0 p=3e-05 r=-0.75
+   participant included nI=18 nE=17 MI=1.83+/-0.38 ME=4.35+/-0.35 U=47.0 p=8.99e-05 r=-0.69
+3 subtle
+   participant removed  nI=18 nE=16 MI=4.17+/-0.38 ME=1.44+/-0.30 U=252.0 p=3e-05 r=0.75
+   participant included nI=18 nE=17 MI=4.17+/-0.38 ME=1.41+/-0.29 U=268.5 p=1.86e-05 r=0.75
+4 told directly
+   participant removed  nI=18 nE=16 MI=2.06+/-0.33 ME=4.94+/-0.06 U=10.0 p=7.77e-07 r=-0.93
+   participant included nI=18 nE=17 MI=2.06+/-0.33 ME=4.71+/-0.24 U=23.0 p=4.73e-06 r=-0.85
+5 looked at block
+   participant removed  nI=18 nE=16 MI=3.44+/-0.44 ME=3.12+/-0.46 U=160.0 p=0.566 r=0.11
+   participant included nI=18 nE=17 MI=3.44+/-0.44 ME=3.00+/-0.45 U=175.0 p=0.446 r=0.14
+
+Part B: questionnaire results, full sample vs participant excluded from the whole pipeline
+full sample: Self-Reliance n=18/17 p=0.00002
+   BPNSS Autonomy             n=18/17 Implicit 3.83 Explicit 3.37 p=0.036 alpha=0.49
+   BPNSS Competence           n=18/17 Implicit 3.37 Explicit 3.08 p=0.245 alpha=0.73
+   IMI Perceived Competence   n=18/17 Implicit 5.06 Explicit 4.24 p=0.062 alpha=0.88
+   IMI Perceived Choice       n=18/17 Implicit 5.85 Explicit 5.61 p=0.750 alpha=0.60
+excluding P31: Self-Reliance n=18/16 p=0.00003
+   BPNSS Autonomy             n=18/16 Implicit 3.83 Explicit 3.35 p=0.031 alpha=0.50
+   BPNSS Competence           n=18/16 Implicit 3.37 Explicit 3.14 p=0.354 alpha=0.71
+   IMI Perceived Competence   n=18/16 Implicit 5.06 Explicit 4.35 p=0.107 alpha=0.88
+   IMI Perceived Choice       n=18/16 Implicit 5.85 Explicit 5.58 p=0.713 alpha=0.60
